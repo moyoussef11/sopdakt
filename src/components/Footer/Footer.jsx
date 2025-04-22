@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-[#FF3200] py-20 md:px-32 flex flex-col justify-center md:flex-row items-center gap-5">
-        <div className="w-full md:w-1/2 text-center md:text-left">
+      <div className="bg-[#FF3200] py-20 md:px-32 flex flex-col flex-wrap lg:flex-nowrap justify-center md:flex-row items-center gap-5">
+        <div className="w-full lg:w-1/2 text-center md:text-left">
           <h4 className="text-[36px] tracking-[4%] text-white font-bold uppercase">
             subscribe newsletter
           </h4>
@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <form className="w-full md:w-[700px] flex  flex-col md:flex-row justify-between items-center gap-2">
+          <form className="w-full md:w-[700px] flex flex-wrap lg:flex-nowrap  flex-col md:flex-row justify-between items-center gap-2">
             <input
               type="text"
               placeholder="Email address..."
@@ -126,7 +126,8 @@ const Footer = () => {
             <div className="flex flex-wrap justify-center items-center gap-6 py-10">
               <span>© 2025 pd. All Rights Reserved.</span>
               <span>
-                Devolped with ♡ by <span className="underline cursor-pointer">piky host</span>
+                Devolped with ♡ by{" "}
+                <span className="underline cursor-pointer">piky host</span>
               </span>
             </div>
             <span>
