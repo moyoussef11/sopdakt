@@ -1,0 +1,78 @@
+@import "tailwindcss";
+/*main color = #FF3200 */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  background-color: gray;
+  opacity: 1;
+}
+
+.custom-swiper-paginations .swiper-pagination {
+  position: absolute;
+  bottom: -30px; 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.custom-swiper-paginations .swiper-pagination-bullet-active {
+  background-color: #ff3200;
+}
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ff3200;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* @layer components{
+  .btn {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  }
+} */
+
+
+.custom-checkbox {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #d1d5db; /* لون الحدود الرمادي */
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+    }
+    .custom-checkbox:checked {
+      background-color: #FF3200;
+      border-color: #FF3200;
+    }
+    .custom-checkbox:checked::after {
+      content: '';
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      width: 6px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
