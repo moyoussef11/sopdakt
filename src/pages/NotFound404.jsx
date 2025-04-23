@@ -26,7 +26,7 @@ const NotFound404 = () => {
           </h4>
           <Link
             to="/"
-            className="!bg-[#FF3200] uppercase w-fit mx-auto font-bold  !text-white py-3 rounded-xl cursor-pointer hover:opacity-70 duration-300 px-5 md:px-14"
+            className="!bg-[#FF3200] uppercase w-fit mx-auto font-bold  !text-white py-3 rounded-xl cursor-pointer hover:!text-black hover:!bg-white hover:!shadow-2xl duration-300 px-5 md:px-14"
           >
             BACK TO HOME PAGE{" "}
           </Link>
