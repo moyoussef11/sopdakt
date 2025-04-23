@@ -41,7 +41,7 @@ function App() {
         <Route path="/cart/checkout/verify" element={<Verify />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="*" element={<SessionExpired />} />
+        <Route path="*" element={<NotFound404 />} />
       </Routes>
       <Footer />
     </>

@@ -9,48 +9,290 @@ import compare from "../../assets/com.png";
 import { CiHeart } from "react-icons/ci";
 import { IoIosSearch, IoMdClose } from "react-icons/io";
 import { CiMenuBurger } from "react-icons/ci";
+import flash from "../../assets/flash.png";
+import { Link, useLocation } from "react-router-dom";
 
-import { Link } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = useLocation().pathname.split("/")[1];
+  const [active, setActive] = useState(pathname === "" ? "/" : pathname);
+
   return (
     <>
-      <header className="w-full relative h-[80px] flex justify-between gap-5 items-center px-[30px] md:px-[180px] py-[20px] bg-white">
-        <div>
+      <header className="w-full relative flex justify-between gap-5 items-center px-[30px] md:px-[56px] lg:px-[180px] py-[10px] bg-white">
+        <Link to="/">
           <img src={logo} className="w-[54px] h-[61px]" alt="logo" />
-        </div>
+        </Link>
         <nav className="hidden md:block h-full">
           <ul className="flex h-full items-center flex-wrap gap-[10px] lg:gap-[30px]">
             <li>
               <Link
                 to="/"
-                className="text-[18px] font-bold leading-[20px] tracking-[0] uppercase underline underline-offset-[13.5%] decoration-[#FF3200]"
+                onClick={() => setActive("/")}
+                className={`text-[18px]  leading-[20px] tracking-[0] uppercase underline-offset-[13.5%] ${
+                  active === "/" ? "activeLink" : ""
+                }`}
               >
                 Home
               </Link>
             </li>
-            <li>
+            <li className="group">
               <Link
-                to="/"
-                className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1"
+                onClick={() => setActive("categories")}
+                to="/categories"
+                className={`text-[18px] font-normal leading-[20px] hover:underline hover:decoration-[#FF3200] hover:font-bold tracking-[0] ${
+                  active === "categories" ? "activeLink" : ""
+                } uppercase flex items-center gap-1`}
               >
                 categories
                 <img src={dropIcon} className="h-[8px]" alt="dropIcon" />
               </Link>
+              <div className="w-full hidden group-hover:block absolute left-0 z-10">
+                <div className="flex h-full">
+                  <div className="w-1/2 bg-white flex items-center justify-between pt-5 pb-16 px-28">
+                    <ul className="flex flex-col gap-3">
+                      <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                        Men{" "}
+                      </h5>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          FASHION TRENDS{" "}
+                        </Link>
+                      </li>
+                    </ul>
+                    <ul className="flex flex-col gap-3">
+                      <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                        women{" "}
+                      </h5>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          FASHION TRENDS{" "}
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    style={{ backgroundImage: `url(${flash})` }}
+                    className="w-1/2 bg-red-500 bg-center bg-cover relative flex items-center justify-center"
+                  >
+                    <div className=" absolute left-0  w-full h-full bg-black opacity-65"></div>
+                    <div className="relative z-10 flex flex-col items-center justify-center gap-5 md:gap-12 text-white text-center">
+                      <h5 className="font-normal text-center text-[32.8px] leading-[24px] md:tracking-[27.36px]">
+                        FLASH SALE
+                      </h5>
+                      <span className="uppercase font-bold text-[61.8px] md:leading-[24px] md:tracking-[3.36px] text-center">
+                        UP TO 70%
+                      </span>
+                      <button className="bg-[#FF3200] text-white text-[16.8px] w-[204px] h-[52px] cursor-pointer hover:bg-white hover:text-black duration-300 font-bold leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
+                        shop now
+                      </button>{" "}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li>
+            <li className="group">
               <Link
-                to="/"
-                className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1"
+                onClick={() => setActive("products")}
+                to="/products"
+                className={`text-[18px] ${
+                  active === "products" ? "activeLink" : ""
+                } hover:underline hover:decoration-[#FF3200] hover:font-bold font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1`}
               >
                 Products
                 <img src={dropIcon} className="h-[8px]" alt="dropIcon" />
               </Link>
+              <div className="w-full hidden group-hover:block absolute left-0 z-10">
+                <div className="flex h-full">
+                  <div className="w-1/2 bg-white flex items-center justify-between pt-5 pb-16 px-28">
+                    <ul className="flex flex-col gap-3">
+                      <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                        Men{" "}
+                      </h5>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          FASHION TRENDS{" "}
+                        </Link>
+                      </li>
+                    </ul>
+                    <ul className="flex flex-col gap-3">
+                      <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                        women{" "}
+                      </h5>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          T-SHIRTS
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/"
+                          className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                        >
+                          FASHION TRENDS{" "}
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    style={{ backgroundImage: `url(${flash})` }}
+                    className="w-1/2 bg-red-500 bg-center bg-cover relative flex items-center justify-center"
+                  >
+                    <div className=" absolute left-0  w-full h-full bg-black opacity-65"></div>
+                    <div className="relative z-10 flex flex-col items-center justify-center gap-5 md:gap-12 text-white text-center">
+                      <h5 className="font-normal text-center text-[32.8px] leading-[24px] md:tracking-[27.36px]">
+                        FLASH SALE
+                      </h5>
+                      <span className="uppercase font-bold text-[61.8px] md:leading-[24px] md:tracking-[3.36px] text-center">
+                        UP TO 70%
+                      </span>
+                      <button className="bg-[#FF3200] text-white text-[16.8px] w-[204px] h-[52px] cursor-pointer hover:bg-white hover:text-black duration-300 font-bold leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
+                        shop now
+                      </button>{" "}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li>
               <Link
+                onClick={() => setActive("about-us")}
                 to="/about-us"
-                className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase"
+                className={`text-[18px] ${
+                  active === "about-us" ? "activeLink" : ""
+                } font-normal leading-[20px] tracking-[0] uppercase hover:underline hover:decoration-[#FF3200] hover:font-bold`}
               >
                 About us{" "}
               </Link>
@@ -58,15 +300,21 @@ const Header = () => {
             <li>
               <Link
                 to="/contact-us"
-                className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase"
+                onClick={() => setActive("contact-us")}
+                className={`text-[18px] ${
+                  active === "contact-us" ? "activeLink" : ""
+                } hover:underline hover:decoration-[#FF3200] hover:font-bold font-normal leading-[20px] tracking-[0] uppercase`}
               >
                 contact us{" "}
               </Link>
             </li>
             <li>
               <Link
+                onClick={() => setActive("blog")}
                 to="/blog"
-                className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase"
+                className={`text-[18px] ${
+                  active === "blog" ? "activeLink" : ""
+                } hover:underline hover:decoration-[#FF3200] hover:font-bold font-normal leading-[20px] tracking-[0] uppercase`}
               >
                 blog{" "}
               </Link>
@@ -85,12 +333,12 @@ const Header = () => {
           <div>
             <ul className="flex flex-wrap shrink-0 items-center gap-[10px]">
               <li>
-                <Link to="/">
+                <Link to="/login">
                   <img src={user} alt="userIcon" className="w-[24px]" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/wishlist">
                   <CiHeart className="w-[24px] h-[24px]" />
                 </Link>
               </li>
@@ -100,12 +348,12 @@ const Header = () => {
                 </Link>
               </li>
               <li className="w-fit">
-                <Link to="/">
+                <Link to="/compare">
                   <img src={compare} alt="compareIcon" className="w-[24px]" />
                 </Link>
               </li>
               <li className="w-fit">
-                <Link to="/" className="relative">
+                <Link to="/cart" className="relative">
                   <span className="absolute -right-1 bg-[#FF5B5B] w-[16px] h-[16px] rounded-[8px] text-center text-[11px]">
                     0
                   </span>
@@ -137,50 +385,278 @@ const Header = () => {
             <ul className="flex h-full flex-col items-center flex-wrap gap-[30px]">
               <li>
                 <Link
+                  onClick={() => {
+                    setIsOpen(false);
+                    setActive("/");
+                  }}
+                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                    active === "/" ? "activeLink" : ""
+                  }`}
                   to="/"
-                  className="text-[18px] font-bold leading-[20px] tracking-[0] uppercase underline underline-offset-[13.5%] decoration-[#FF3200]"
                 >
                   Home
                 </Link>
               </li>
-              <li>
+              <li className="group">
                 <Link
-                  to="/"
-                  className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1"
+                  onClick={() => {
+                    setIsOpen(false);
+                    setActive("categories");
+                  }}
+                  className={`text-[18px] ${
+                    active === "categories" ? "activeLink" : ""
+                  } font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1`}
+                  to="/categories"
                 >
                   categories
                   <img src={dropIcon} className="h-[8px]" alt="dropIcon" />
                 </Link>
+                <div className="w-full hidden group-hover:block absolute left-0 z-10">
+                  <div className="flex flex-col h-full">
+                    <div className=" bg-white flex items-center justify-between pt-5 pb-16 px-5">
+                      <ul className="flex flex-col gap-3">
+                        <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                          Men{" "}
+                        </h5>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            FASHION TRENDS{" "}
+                          </Link>
+                        </li>
+                      </ul>
+                      <ul className="flex flex-col gap-3">
+                        <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                          women{" "}
+                        </h5>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            FASHION TRENDS{" "}
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li>
+              <li className="group">
                 <Link
-                  to="/"
-                  className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1"
+                  to="/products"
+                  onClick={() => {
+                    setIsOpen(false);
+                    setActive("products");
+                  }}
+                  className={`text-[18px] ${
+                    active === "products" ? "activeLink" : ""
+                  } font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1`}
                 >
                   Products
                   <img src={dropIcon} className="h-[8px]" alt="dropIcon" />
                 </Link>
+                <div className="w-full hidden group-hover:block absolute left-0 z-10">
+                  <div className="flex flex-col h-full">
+                    <div className=" bg-white flex items-center justify-between pt-5 pb-16 px-5">
+                      <ul className="flex flex-col gap-3">
+                        <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                          Men{" "}
+                        </h5>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            FASHION TRENDS{" "}
+                          </Link>
+                        </li>
+                      </ul>
+                      <ul className="flex flex-col gap-3">
+                        <h5 className="text-[23px] my-5 leading-[20px] font-medium capitalize">
+                          women{" "}
+                        </h5>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            T-SHIRTS
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/"
+                            className="text-[18px] leading-[20px] text-[#6F6C90] uppercase"
+                          >
+                            FASHION TRENDS{" "}
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
                 <Link
+                  onClick={() => {
+                    setIsOpen(false);
+                    setActive("about-us");
+                  }}
+                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                    active === "about-us" ? "activeLink" : ""
+                  }`}
                   to="/about-us"
-                  className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase"
                 >
                   About us{" "}
                 </Link>
               </li>
               <li>
                 <Link
+                  onClick={() => {
+                    setIsOpen(false);
+                    setActive("contact-us");
+                  }}
+                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                    active === "contact-us" ? "activeLink" : ""
+                  }`}
                   to="/contact-us"
-                  className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase"
                 >
                   contact us{" "}
                 </Link>
               </li>
               <li>
                 <Link
+                  onClick={() => {
+                    setIsOpen(false);
+                    setActive("blog");
+                  }}
+                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                    active === "blog" ? "activeLink" : ""
+                  }`}
                   to="/blog"
-                  className="text-[18px] font-normal leading-[20px] tracking-[0] uppercase"
                 >
                   blog{" "}
                 </Link>
@@ -199,12 +675,12 @@ const Header = () => {
             <div>
               <ul className="flex flex-wrap shrink-0 items-center gap-[10px]">
                 <li>
-                  <Link to="/">
+                  <Link onClick={() => setIsOpen(false)} to="/login">
                     <img src={user} alt="userIcon" className="w-[24px]" />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link onClick={() => setIsOpen(false)} to="/wishlist">
                     <CiHeart className="w-[24px] h-[24px]" />
                   </Link>
                 </li>
@@ -213,13 +689,17 @@ const Header = () => {
                     <IoIosSearch className="w-[24px] h-[24px]" />
                   </Link>
                 </li>
-                <li className="w-fit">
-                  <Link to="/">
+                <li onClick={() => setIsOpen(false)} className="w-fit">
+                  <Link to="/compare">
                     <img src={compare} alt="compareIcon" className="w-[24px]" />
                   </Link>
                 </li>
                 <li className="w-fit">
-                  <Link to="/" className="relative">
+                  <Link
+                    onClick={() => setIsOpen(false)}
+                    to="/cart"
+                    className="relative"
+                  >
                     <span className="absolute -right-1 bg-[#FF5B5B] w-[16px] h-[16px] rounded-[8px] text-center text-[11px]">
                       0
                     </span>

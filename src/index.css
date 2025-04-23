@@ -15,7 +15,7 @@ body {
 
 .custom-swiper-paginations .swiper-pagination {
   position: absolute;
-  bottom: -30px; 
+  bottom: -30px;
   left: 0;
   width: 100%;
   display: flex;
@@ -42,38 +42,36 @@ body {
   animation: marquee 20s linear infinite;
 }
 
-/* @layer components{
-  .btn {
-    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+@layer components {
+  .activeLink {
+    @apply underline decoration-[#FF3200] !font-bold;
   }
-} */
-
+}
 
 .custom-checkbox {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 40px;
-      height: 40px;
-      border: 2px solid #d1d5db; /* لون الحدود الرمادي */
-      border-radius: 4px;
-      outline: none;
-      cursor: pointer;
-      position: relative;
-    }
-    .custom-checkbox:checked {
-      background-color: #FF3200;
-      border-color: #FF3200;
-    }
-    .custom-checkbox:checked::after {
-      content: '';
-      position: absolute;
-      top: 13px;
-      left: 15px;
-      width: 6px;
-      height: 10px;
-      border: solid white;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-    }
-    
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d1d5db; /* لون الحدود الرمادي */
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.custom-checkbox:checked {
+  background-color: #ff3200;
+  border-color: #ff3200;
+}
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
