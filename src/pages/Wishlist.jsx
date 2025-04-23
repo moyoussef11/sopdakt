@@ -2,6 +2,7 @@ import React from "react";
 import { Table, Button } from "antd";
 import pro from "../assets/pro.png";
 import closeWhite from "../assets/closeWihte.png";
+import MainSection from "../components/Tabs/MainSection";
 
 const data = [
   {
@@ -172,7 +173,9 @@ const Wishlist = () => {
               (e.currentTarget.style.backgroundColor = "#EF4444")
             }
           >
-            <span className="uppercase md:text-[16.8px] font-bold md:py-2">SELECT OPTION</span>
+            <span className="uppercase md:text-[16.8px] font-bold md:py-2">
+              SELECT OPTION
+            </span>
           </Button>
         </div>
       ),
@@ -182,15 +185,7 @@ const Wishlist = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt; Wishlist
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          Wishlist{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` Wishlist`} title={"Wishlist"} />{" "}
       <div className="py-10 md:py-24">
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           My wishlist{" "}

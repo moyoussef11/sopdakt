@@ -1,19 +1,12 @@
 import React from "react";
 import pro from "../assets/pro.png";
 import { Link } from "react-router-dom";
+import MainSection from "../components/Tabs/MainSection";
 const Cart = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;cart
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          cart{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` cart`} title={"cart"} />
       <section className="py-16 px-5 md:px-10 lg:px-24">
         <div className="bg-white p-6 flex flex-col md:flex-row gap-6">
           {/* Left Section - Products */}

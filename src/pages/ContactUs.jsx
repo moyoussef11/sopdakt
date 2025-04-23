@@ -4,19 +4,13 @@ import phoneIcon from "../assets/icons-phone.png";
 import instaIcon from "../assets/Group 198.png";
 import faceIcon from "../assets/Group 200.png";
 import tikIcon from "../assets/Group 199.png";
+import MainSection from "../components/Tabs/MainSection";
 const ContactUs = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt; contact us
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          contact us{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` contact us`} title={"contact us"} />
+    
       <div className="py-10 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
         <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-[12px] p-10 flex flex-col gap-5">
           <div className="flex gap-2 items-center">

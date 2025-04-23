@@ -2,6 +2,7 @@ import React from "react";
 import comparImg from "../assets/compare.png";
 import comparIcon from "../assets/compareIcon.png";
 import { Link } from "react-router-dom";
+import MainSection from "../components/Tabs/MainSection";
 
 const products = [
   {
@@ -62,15 +63,8 @@ const Compare = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt; compare
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          compare{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` compare`} title={"compare"} />
+      
       <div className="py-10 md:py-24">
         <div className="max-w-[1200px] mx-auto overflow-x-auto">
           <table className="table-auto border-separate border-spacing-0 w-full text-sm">

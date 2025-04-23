@@ -7,6 +7,7 @@ import service4 from "../assets/Services4.png";
 import founder from "../assets/founder.png";
 import CardService from "../components/cards/CardService";
 import { motion, useInView } from "framer-motion";
+import MainSection from "../components/Tabs/MainSection";
 
 const AboutUs = () => {
   const ref = React.useRef(null);
@@ -16,15 +17,8 @@ const AboutUs = () => {
   });
   return (
     <>
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;ABOUT US
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          ABOUT US{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={`ABOUT US`} title={"ABOUT US"} />
+
       <main
         className="w-full h-[700px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
         style={{

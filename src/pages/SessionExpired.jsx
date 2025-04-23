@@ -2,18 +2,12 @@ import React from "react";
 import SessionExpiredPic from "../assets/419.png";
 import SessionExpiredPicIcon from "../assets/expierd.png";
 import { Link } from "react-router-dom";
+import MainSection from "../components/Tabs/MainSection";
 const SessionExpired = () => {
   return (
     <>
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;419
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          419{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` 419`} title={"419"} />{" "}
+     
       <div className="w-full overflow-hidden relative py-20 flex items-center justify-center bg-black text-white">
         <div className="flex flex-col gap-10 items-center justify-center">
           <img

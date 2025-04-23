@@ -1,18 +1,12 @@
 import React from "react";
 import notFoundPic from "../assets/404.png";
 import { Link } from "react-router-dom";
+import MainSection from "../components/Tabs/MainSection";
 const NotFound404 = () => {
   return (
     <>
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;404
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          404{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` 404`} title={"404"} />
+
       <div className="w-full py-20 flex items-center justify-center bg-black text-white">
         <div className="flex flex-col gap-10 items-center justify-center">
           <img

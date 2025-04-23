@@ -1,19 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MainSection from "../components/Tabs/MainSection";
 
 const Profile = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;profile
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          profile
-        </p>
-      </div>
+      <MainSection breadcrumb={` profile`} title={"profile"} />{" "}
+   
       <div className="py-10 px-5 md:px-24 lg:px-32 flex flex-col md:flex-row gap-5">
         <div className="w-full md:w-1/4 flex flex-col space-y-7">
           <ul className="flex items-center md:items-start md:flex-col justify-center md:justify-start  gap-3 flex-wrap">

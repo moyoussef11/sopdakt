@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import product1 from "../assets/shirtShop.png";
 import CardShop from "../components/cards/CardShop";
+import MainSection from "../components/Tabs/MainSection";
 
 const products = Array(8).fill({
   name: "The Cloud Relaxed Cardigan",
@@ -24,16 +25,8 @@ const Products = () => {
   const clothingSizes = filters.size;
   return (
     <>
-      {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home &gt; CATEGORISE </span> &gt; MEN
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          MEN{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` CATEGORIES > MEN`} title={"MEN"} />{" "}
+   
       <div className="px-5 md:px-24 py-14 flex flex-col md:flex-row gap-4 ">
         <div className="w-full md:w-1/4 p-2">
           <span className="text-[12px] leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">

@@ -1,4 +1,5 @@
 import FAQSection from "../components/Accordion/FAQSection";
+import MainSection from "../components/Tabs/MainSection";
 
 const faqs = [
   {
@@ -72,15 +73,8 @@ const Faqs = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;faqs
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          faqs
-        </p>
-      </div>
+      <MainSection breadcrumb={` faqs`} title={"faqs"} />
+     
       <section id="accordion" className="py-5 md:py-14 px-5 md:px-24">
         <FAQSection faqs={faqs} />
       </section>

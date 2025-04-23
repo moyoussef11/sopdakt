@@ -6,6 +6,7 @@ import visaPic from "../assets/payment.png";
 import arrowPic from "../assets/ar.png";
 import { Modal, Input, Typography } from "antd";
 import { Link } from "react-router-dom";
+import MainSection from "../components/Tabs/MainSection";
 
 const Checkout = () => {
   const [paymentMethod, setPaymentMethod] = useState("card");
@@ -26,15 +27,7 @@ const Checkout = () => {
   return (
     <>
       {" "}
-      <div className="py-10 bg-black text-white flex flex-col items-center justify-center">
-        <span className="uppercase leading-[75.2px] text-center">
-          {" "}
-          <span className="text-gray-400">home</span> &gt;cart &gt; checkout
-        </span>
-        <p className="text-[28px] uppercase font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
-          checkout{" "}
-        </p>
-      </div>
+      <MainSection breadcrumb={` cart > checkout`} title={"checkout"} />
       <section className="px-5 md:px-10 lg:px-28 py-16">
         <h4 className="text-[22px] font-bold leading-[33px] tracking-[-0.22px] capitalize">
           Billing details
