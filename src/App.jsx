@@ -12,6 +12,13 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Product from "./pages/Product.jsx";
 import Wishlist from "./pages/Wishlist.jsx";
 import Compare from "./pages/Compare.jsx";
+import Profile from "./pages/Profile.jsx";
+import Faqs from "./pages/Faqs.jsx";
+import Cart from "./pages/Cart.jsx";
+import Checkout from "./pages/Checkout.jsx";
+import Verify from "./pages/Verify.jsx";
+import NotFound404 from "./pages/NotFound404.jsx";
+import SessionExpired from "./pages/SessionExpired.jsx";
 
 function App() {
   return (
@@ -28,7 +35,13 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/compare" element={<Compare />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/checkout" element={<Checkout />} />
+        <Route path="/cart/checkout/verify" element={<Verify />} />
+        <Route path="/faqs" element={<Faqs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<SessionExpired />} />
       </Routes>
       <Footer />
     </>

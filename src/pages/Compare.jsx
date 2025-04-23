@@ -76,7 +76,7 @@ const Compare = () => {
           <table className="table-auto border-separate border-spacing-0 w-full text-sm">
             <thead>
               <tr>
-                <th className="sticky left-0 bg-white font-bold p-4 text-left min-w-[200px] z-10"></th>
+                <th className="sticky left-0 bg-transparent font-bold p-4 text-left min-w-[200px] z-10"></th>
                 {products.map((product, i) => (
                   <th
                     key={i}
@@ -119,7 +119,7 @@ const Compare = () => {
                   key={i}
                   className={i % 2 === 0 ? "bg-gray-100" : "bg-white"}
                 >
-                  <td className="sticky left-0 font-semibold p-4 max-w-[200px] z-10 shadow-inner">
+                  <td className="sticky left-0 font-semibold bg-white p-4 max-w-[200px] z-10 shadow-inner">
                     {row.label}
                   </td>
                   {row.values.map((val, j) => (
