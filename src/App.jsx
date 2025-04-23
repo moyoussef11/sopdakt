@@ -19,6 +19,7 @@ import Checkout from "./pages/Checkout.jsx";
 import Verify from "./pages/Verify.jsx";
 import NotFound404 from "./pages/NotFound404.jsx";
 import SessionExpired from "./pages/SessionExpired.jsx";
+import Signup from "./pages/Signup.jsx";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/cart/checkout/verify" element={<Verify />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/create-account" element={<Signup />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
       <Footer />

@@ -13,7 +13,7 @@ import product1 from "../assets/product-6.jpg.png";
 import CardProductLike from "../components/cards/CardProductLike";
 import SizeChart from "../components/Tabs/Size";
 import { motion, useInView } from "framer-motion";
-
+import SizeRecommendation from "../components/Tabs/SizeRecommendation";
 
 const faqs = [
   {
@@ -83,10 +83,12 @@ const faqs = [
   },
 ];
 
-
 const Product = () => {
   const [mainImage, setMainImage] = useState(pro1);
   const [openSize, setOpenSize] = useState(false);
+  const [openSizeRec, setOpenSizeRec] = useState(false);
+  console.log(openSizeRec);
+
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: false,
@@ -213,7 +215,10 @@ const Product = () => {
                 <span className="w-[40px] h-[40px] bg-[#F5F5F5] rounded-[9px] cursor-pointer border-2 border-transparent p-3 hover:border-[#FF3200] flex items-center justify-center hover:text-[#FF3200] font-bold text-[12px] leading-[33.24px] tracking-[0]">
                   XXL{" "}
                 </span>
-                <span className="bg-[#F5F5F5] capitalize rounded-[9px] cursor-pointer border-2 border-transparent p-1 hover:border-[#FF3200] hover:text-[#FF3200] font-bold text-[12px] leading-[33.24px] tracking-[0]">
+                <span
+                  onClick={() => setOpenSizeRec(true)}
+                  className="bg-[#F5F5F5] capitalize rounded-[9px] cursor-pointer border-2 border-transparent p-1 hover:border-[#FF3200] hover:text-[#FF3200] font-bold text-[12px] leading-[33.24px] tracking-[0]"
+                >
                   Size Recomnadtion{" "}
                 </span>
               </div>
@@ -330,6 +335,10 @@ const Product = () => {
         </div>
       </section>
       <SizeChart openSize={openSize} setOpenSize={setOpenSize} />
+      <SizeRecommendation
+        openSizeRec={openSizeRec}
+        setOpenSizeRec={setOpenSizeRec}
+      />
     </>
   );
 };
