@@ -20,17 +20,20 @@ import Verify from "./pages/Verify.jsx";
 import NotFound404 from "./pages/NotFound404.jsx";
 import SessionExpired from "./pages/SessionExpired.jsx";
 import Signup from "./pages/Signup.jsx";
+import BlogDetails from "./pages/BlogDetails.jsx";
+import Login from "./pages/Login.jsx";
 
 function App() {
   return (
     <>
-      <TopBar />
-      <Header />
+      {/* <TopBar /> */}
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/blog-details/:id" element={<BlogDetails />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product" element={<Product />} />
@@ -43,9 +46,10 @@ function App() {
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/create-account" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -2,12 +2,12 @@ import React from "react";
 import logo from "../assets/logo.png";
 import authImg from "../assets/auth.png";
 import deviderImg from "../assets/Divider.png";
-import { FcGoogle } from "react-icons/fc";
+import { FaGoogle, FaApple, FaTwitter, FaFacebookF } from "react-icons/fa";
 import { Input, Button } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-const Signup = () => {
+const Login = () => {
   const [passwordVisible, setPasswordVisible] = React.useState(false);
 
   return (
@@ -27,17 +27,13 @@ const Signup = () => {
             className="h-[70px] mb-5 w-[60px]  mx-auto"
             alt="logo"
           />
-          <h3 className="text-[32px] mb-5 font-semibold leading-[41px] uppercase text-center">
-            Create an account
+          <h3 className="text-[25px] mb-5 font-semibold leading-[41px] uppercase text-center">
+            Welcome back to sopdakt{" "}
           </h3>
-          <p className="text-center border border-[#CBCAD7] my-5 rounded-[10px] py-3 cursor-pointer leading-[25px] flex items-center flex-wrap md:flex-nowrap md:gap-5 justify-center text-[#19181F]">
-            Create account with Google <FcGoogle size={30} />
+          <p className="text-center  my-5 rounded-[10px] py-3  leading-[25px] flex items-center flex-wrap md:flex-nowrap md:gap-5 justify-center text-[#19181F]">
+            Kindly fill in your details below to log in{" "}
           </p>
-          <div className="flex items-center my-5 gap-4 justify-center">
-            <img src={deviderImg} alt="deviderImg" />
-            <span>Or</span>
-            <img src={deviderImg} alt="deviderImg" />
-          </div>
+
           <form className="flex flex-col gap-3">
             <div className="flex flex-col gap-2">
               <label
@@ -52,19 +48,7 @@ const Signup = () => {
                 placeholder="Enter your email address"
               />
             </div>
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="name"
-                className="leading-[25px] uppercase text-[#9794AA] font-medium"
-              >
-                Full Name{" "}
-              </label>
-              <Input
-                id="name"
-                className="placeholder:uppercase border !border-[#CBCAD7] !p-4 !rounded-[6px]"
-                placeholder="Enter your full name"
-              />
-            </div>
+
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="Password"
@@ -75,21 +59,35 @@ const Signup = () => {
               <Input.Password
                 id="Password"
                 className="placeholder:!uppercase border !border-[#CBCAD7] !p-4 !rounded-[6px]"
-                placeholder="Create your password"
+                placeholder="**************"
                 iconRender={(visible) =>
                   visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
                 }
               />
             </div>
             <Button className="!bg-[#FF3200] !text-white !uppercase !text-[16.8px] !leading-[24px] !font-bold !tracking-[3.36px] !px-5 !my-1 !w-fit mx-auto !border-none hover:!shadow-md hover:!text-black hover:!bg-white">
-              sign up
+              sign in{" "}
             </Button>
             <p className="leading-[25px] text-center uppercase tracking-[0.5%] font-normal">
-              Already have an account?{" "}
-              <Link className="text-[#FF3200] underline font-bold" to="/login">
-                Login
+              don`t have an account?{" "}
+              <Link
+                className="text-[#FF3200] underline font-bold"
+                to="/create-account"
+              >
+                signup
               </Link>
             </p>
+            <div className="flex items-center my-5 gap-4 justify-center">
+              <img src={deviderImg} alt="deviderImg" />
+              <span>Or</span>
+              <img src={deviderImg} alt="deviderImg" />
+            </div>
+            <div className="mx-auto flex items-center gap-5 flex-wrap">
+              <FaGoogle className="text-[#716F6F] h-[20px] w-[20px] cursor-pointer hover:text-red-500 duration-300" />
+              <FaApple className="text-[#716F6F] h-[20px] w-[20px] cursor-pointer hover:text-black duration-300" />
+              <FaTwitter className="text-[#716F6F] h-[20px] w-[20px] cursor-pointer hover:text-blue-400 duration-300" />
+              <FaFacebookF className="text-[#716F6F] h-[20px] w-[20px] cursor-pointer hover:text-blue-600 duration-300" />
+            </div>
           </form>
         </div>
       </div>
@@ -97,4 +95,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
