@@ -20,12 +20,12 @@ const CardCat = ({ pic, name }) => {
       }}
       className="card w-full flex flex-col items-center justify-center"
     >
-      <div className="w-full h-[310px] sm:w-[252px] sm:h-[252px] rounded-full bg-[#D9D9D9]">
+      <div className=" sm:w-[252px] sm:h-[252px] rounded-full bg-[#D9D9D9]">
         {pic && (
           <img src={pic} className="w-full h-full" alt={name} loading="lazy" />
         )}
       </div>
-      <h3 className="font-medium uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center my-7">
+      <h3 className="font-medium uppercase md:text-[34.8px] leading-[24px] tracking-[3.36px] text-center my-7">
         {name}
       </h3>
     </motion.div>

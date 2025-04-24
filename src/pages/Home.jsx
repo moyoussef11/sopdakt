@@ -43,10 +43,10 @@ const Home = () => {
                   shop now
                 </button>
               </div>
-              <div className="w-full h-full md:w-1/2">
+              <div className="w-full h-full bg-[#e9e9e9] md:w-1/2">
                 <img
                   src={heroImg}
-                  className="h-full w-full object-center"
+                  className="object-contain h-full w-full"
                   alt="heroImg"
                 />
               </div>
@@ -70,10 +70,10 @@ const Home = () => {
                   shop now
                 </button>
               </div>
-              <div className="w-full h-full md:w-1/2">
+              <div className="w-full h-full bg-[#e9e9e9] md:w-1/2">
                 <img
                   src={heroImg}
-                  className="h-full w-full object-center"
+                  className="object-contain h-full w-full"
                   alt="heroImg"
                 />
               </div>
@@ -88,15 +88,15 @@ const Home = () => {
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           CATEGORIES
         </h4>
-        <div className="cards  py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        <div className="cards scale-90 py-14 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           <CardCat pic={cat1} name="T-Shirts" />
-          <CardCat name="jeans" />
-          <CardCat name="watches" />
-          <CardCat name="shirts" />
-          <CardCat name="jeans" />
-          <CardCat name="T-Shirts" />
-          <CardCat name="watches" />
-          <CardCat name="watches" />
+          <CardCat pic={cat1} name="jeans" />
+          <CardCat pic={cat1} name="watches" />
+          <CardCat pic={cat1} name="shirts" />
+          <CardCat pic={cat1} name="jeans" />
+          <CardCat pic={cat1} name="T-Shirts" />
+          <CardCat pic={cat1} name="watches" />
+          <CardCat pic={cat1} name="watches" />
         </div>
       </section>
       <section id="best-seller" className="py-20 bg-[#D9D9D9] px-5">
@@ -123,6 +123,7 @@ const Home = () => {
                   spaceBetween: 30,
                 },
               }}
+              loop={true}
               modules={[Pagination]}
               className="mySwiper custom-swiper-paginations"
             >
