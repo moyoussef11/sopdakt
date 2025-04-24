@@ -26,8 +26,8 @@ import Login from "./pages/Login.jsx";
 function App() {
   return (
     <>
-      {/* <TopBar /> */}
-      {/* <Header /> */}
+      <TopBar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -49,7 +49,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
