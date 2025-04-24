@@ -56,7 +56,7 @@ const CardProducts = ({ path, pic, name, price, category }) => {
           {category}
         </span>
         <div className="flex items-center justify-between gap-2">
-          <h5 className="text-[15px] font-normal capitalize">
+          <h5 className="text-[15px] text-black font-normal capitalize">
             {name.length > 20 ? name.slice(0, 20) + "..." : name}
           </h5>
           <span className="leading-[31px] tracking-[0] text-[#909090] uppercase text-[15px] font-normal">
