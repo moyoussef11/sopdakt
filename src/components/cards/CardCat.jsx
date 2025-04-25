@@ -18,14 +18,19 @@ const CardCat = ({ pic, name }) => {
         stiffness: 260,
         damping: 20,
       }}
-      className="card w-full flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center"
     >
-      <div className=" sm:w-[252px] sm:h-[252px] rounded-full bg-[#D9D9D9]">
+      <div className="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[140px] md:h-[140px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#D9D9D9] overflow-hidden">
         {pic && (
-          <img src={pic} className="w-full h-full" alt={name} loading="lazy" />
+          <img
+            src={pic}
+            className="w-full h-full object-cover"
+            alt={name}
+            loading="lazy"
+          />
         )}
       </div>
-      <h3 className="font-medium uppercase md:text-[34.8px] leading-[24px] tracking-[3.36px] text-center my-7">
+      <h3 className="font-medium uppercase text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] tracking-[2px] text-center mt-3">
         {name}
       </h3>
     </motion.div>

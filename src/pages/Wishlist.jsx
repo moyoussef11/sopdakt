@@ -157,14 +157,14 @@ const Wishlist = () => {
               (e.currentTarget.style.backgroundColor = "#fff")
             }
           >
-            <span className="text-[13px] font-bold"> QUICK VIEW</span>
+            <span className=" text-[10px] md:text-[13px] font-bold"> QUICK VIEW</span>
           </Button>
 
           <Button
             style={{
               backgroundColor: "#FF3200", // = bg-red-500
               color: "#FFFFFF", // = text-white
-              padding: size < 768 ? "10px" : "10px 40px",
+              padding: size < 768 ? "1px" : "10px 40px",
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor = "#DC2626")
@@ -173,7 +173,7 @@ const Wishlist = () => {
               (e.currentTarget.style.backgroundColor = "#EF4444")
             }
           >
-            <span className="uppercase md:text-[16.8px] font-bold md:py-2">
+            <span className="uppercase text-[10px] md:text-[16.8px] font-bold md:py-2">
               SELECT OPTION
             </span>
           </Button>
@@ -190,7 +190,7 @@ const Wishlist = () => {
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           My wishlist{" "}
         </h4>{" "}
-        <div className="p-4 my-10 max-w-6xl mx-auto">
+        <div className="md:p-4 my-10 max-w-6xl mx-auto">
           <Table
             columns={columns}
             dataSource={data}

@@ -10,8 +10,7 @@ const ContactUs = () => {
     <>
       {" "}
       <MainSection breadcrumb={` contact us`} title={"contact us"} />
-    
-      <div className="py-10 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
+      <div className="py-10 scale-90 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
         <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-[12px] p-10 flex flex-col gap-5">
           <div className="flex gap-2 items-center">
             <img src={phoneIcon} alt="phoneIcon" loading="lazy" />
@@ -68,7 +67,7 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-      <div className="py-16 flex flex-col items-center justify-center">
+      <div className="py-16 scale-90 flex flex-col items-center justify-center">
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           follow us
         </h4>{" "}

@@ -10,13 +10,13 @@ const CardOffer = ({ pic1, pic2, title, offer, desc }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ x: 300, opacity: 0 }}
-      animate={isInView ? { x: 0, opacity: 1 } : { x: 300, opacity: 0 }}
+      initial={{ x: 100, opacity: 0 }}
+      animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="card shadow-2xl flex flex-col items-center justify-between rounded-[12px]"
     >
       <div className="head w-full bg-black rounded-t-[12px]">
-        <h4 className="text-[33px] leading-[33.24px] tracking-[13px] uppercase text-white font-bold text-center p-7">
+        <h4 className="text-2xl md:text-[33px] md:leading-[33.24px] tracking-[13px] uppercase text-white font-bold text-center p-7">
           {title}
         </h4>
       </div>

@@ -16,7 +16,7 @@ const Blog = () => {
       <MainSection breadcrumb={`BLOG`} title={"BLOG"} />
       <section
         style={{ backgroundImage: `url(${heroImg})` }}
-        className="w-full h-screen bg-center bg-cover bg-no-repeat relative flex items-center justify-center md:justify-start px-5 md:px-16 lg:px-32"
+        className="w-full h-screen  bg-center bg-cover bg-no-repeat relative flex items-center justify-center md:justify-start px-5 md:px-16 lg:px-32"
       >
         <div className="bg-[#FF5B5B30] w-full h-full absolute left-0"></div>
 
@@ -24,7 +24,7 @@ const Blog = () => {
           We believe <br /> we can all make <br /> a difference.
         </h4>
       </section>
-      <section className="py-24 px-5 md:px-16 lg:px-32">
+      <section className="scale-90 px-5 md:px-16 lg:px-32">
         <form className="flex items-center justify-center">
           <Input
             size="large"

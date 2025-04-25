@@ -92,7 +92,7 @@ const Product = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: false,
-    amount: 0.5,
+    amount: 0.05,
   });
   return (
     <>
@@ -104,13 +104,7 @@ const Product = () => {
         </span>
       </div>
       <div className="hero overflow-hidden px-5 md:px-24 py-5 md:py-10 flex flex-col md:flex-row items-center gap-10">
-        <motion.div
-          ref={ref}
-          initial={{ x: -300, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { x: -360, opacity: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="w-full py-10 md:w-1/2 flex flex-col md:flex-row gap-4 items-center justify-center"
-        >
+        <div className="w-full py-10 md:w-1/2 flex flex-col md:flex-row gap-4 items-center justify-center">
           <div className="imgs md:flex grid grid-cols-2 md:flex-wrap items-center justify-center md:flex-col gap-2 md:gap-5">
             <img
               src={pro1}
@@ -154,16 +148,20 @@ const Product = () => {
               loading="lazy"
             />
           </div>
-        </motion.div>
+        </div>
         <motion.div
           ref={ref}
           initial={{ x: 300, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { x: 360, opacity: 0 }}
+          animate={{
+            x: isInView || window.innerWidth < 768 ? 0 : 360,
+            opacity: isInView || window.innerWidth < 768 ? 1 : 0,
+          }}
+          
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="w-full  md:w-1/2"
         >
           <div className="head border-b-2 border-[#D9D9D9] pb-5">
-            <h4 className="font-bold text-[20px] md:text-[45px] leading-[33.24px] uppercase tracking-[0] ">
+            <h4 className="font-bold text-[20px] md:text-[45px] md:leading-[33.24px] uppercase tracking-[0] ">
               Oversized Shirt Jacket
             </h4>
             <div className="flex items-center justify-between flex-wrap gap-2 my-5">
@@ -255,7 +253,7 @@ const Product = () => {
         </motion.div>
       </div>
       <section id="offers" className="md:py-14 overflow-hidden">
-        <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
+        <h4 className="font-bold uppercase text-[34.8px] sm:leading-[24px] tracking-[3.36px] text-center">
           special bundle offers{" "}
         </h4>
         <div className="cards my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:px-24">
@@ -300,7 +298,7 @@ const Product = () => {
         <FAQSection faqs={faqs.slice(0, 3)} />
       </section>
       <section id="offers" className="py-14 bg-[#D9D9D9] overflow-hidden">
-        <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
+        <h4 className="font-bold uppercase text-[34.8px] md:leading-[24px] tracking-[3.36px] text-center">
           YOU MIGHT ALSO LIKE{" "}
         </h4>
         <div className="cards py-10 px-5 flex items-center justify-center gap-5 md:gap-10 flex-wrap">

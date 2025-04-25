@@ -27,12 +27,12 @@ const AboutUs = () => {
       >
         <div className="h-full w-full absolute bg-[#FF32006B]"></div>
 
-        <h4 className="text-5xl sm:text-[70px] relative font-bold text-white text-center leading-[84px] tracking-[0.2px] uppercase">
+        <h4 className="text-5xl sm:text-[70px] relative font-bold text-white text-center md:leading-[84px] tracking-[0.2px] uppercase">
           We believe <br /> we can all make <br /> a difference.
         </h4>
       </main>
       <section id="our-story" className="py-14 px-5 md:px-24">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1100px] scale-90 mx-auto">
           <h4 className="text-[54px] mb-5 leading-[64px] md:tracking-[49px] text-[#FF3200] text-center font-bold uppercase">
             Our Story
           </h4>
@@ -51,7 +51,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section id="vision" className="py-14 px-5 md:px-8 lg:px-24">
-        <div className="flex gap-8 flex-col flex-wrap md:flex-row lg:flex-nowrap">
+        <div className="flex scale-90 gap-8 flex-col flex-wrap md:flex-row lg:flex-nowrap">
           <div className="max-w-[1100px] mx-auto flex flex-col gap-10">
             <div className="w-full bg-white rounded-[11px] shadow-2xl p-6">
               <h5 className="uppercase text-[54px] leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
@@ -86,7 +86,10 @@ const AboutUs = () => {
         </div>
       </section>
       <section id="founder" className="py-28 px-5 md:px-24 overflow-hidden">
-        <div className="services max-w-[1100px] mx-auto grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div
+          className="services max-w-[1100px] scale-125 sm:scale-none w-fit mx-auto grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4 "
+          // className="services max-w-[1100px] mx-auto grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
           <CardService
             nums={"10.5k"}
             pic={service1}

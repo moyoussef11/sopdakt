@@ -6,7 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 
-const CardProducts = ({ path, pic, name, price, category }) => {
+const CardProducts = ({ id, pic, name, price, category }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: false,
@@ -20,7 +20,7 @@ const CardProducts = ({ path, pic, name, price, category }) => {
       transition={{ duration: 0.7, ease: "easeOut" }}
       className="card p-3 w-full md:w-[263px] bg-white rounded-[9px] relative group duration-200"
     >
-      <Link to={path}>
+      <Link to={`/product/${id}`}>
         <img src={linkIcon} alt="linkIcon" className="ml-auto" />
       </Link>
       <div className="relative">
@@ -32,8 +32,8 @@ const CardProducts = ({ path, pic, name, price, category }) => {
         />
         <div className="absolute top-0 left-0 w-full h-full group duration-300 hidden group-hover:flex items-center justify-center gap-2">
           <div className="w-full h-full absolute bg-white opacity-0 group-hover:opacity-35"></div>
-          <div className="flex z-10 items-center flex-col justify-center gap-2">
-            <div className="flex items-center justify-center gap-2">
+          <div className="flex w-full z-10 items-center flex-col justify-center gap-2">
+            <div className="flex w-full flex-wrap md:flex-nowrap items-center justify-center gap-2">
               <span className="text-black p-[12px] uppercase w-[40px] h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
                 m
               </span>
@@ -44,18 +44,22 @@ const CardProducts = ({ path, pic, name, price, category }) => {
                 xl
               </span>
             </div>
-            <button className="bg-[#FF3200] text-white rounded-[9px] w-[200px] flex items-center justify-center gap-2 py-2 px-4 cursor-pointer hover:text-black duration-300 font-bold leading-[20px] tracking-[0] uppercase">
-              <img src={QuickAdd} alt="QuickAdd" />
+            <button className="bg-[#FF3200] text-white rounded-[9px] md:w-[200px] flex items-center justify-center sm:gap-2 py-1 sm:py-2 px-2 sm:px-4 cursor-pointer hover:text-black duration-300 font-bold text-[10px] sm:text-[18px] sm:leading-[20px] md:tracking-[0] uppercase">
+              <img
+                src={QuickAdd}
+                className="h-3 w-3 sm:h-5 sm:w-5"
+                alt="QuickAdd"
+              />
               Quick Add
             </button>
           </div>
         </div>
       </div>
       <div>
-        <span className="uppercase text-[#909090] text-sm hover:text-black">
+        <span className="uppercase text-[#909090] text-sm text-center mx-auto block sm:mx-0 sm:text-left hover:text-black">
           {category}
         </span>
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center flex-wrap justify-center sm:justify-between gap-2">
           <h5 className="text-[15px] text-black font-normal capitalize">
             {name.length > 20 ? name.slice(0, 20) + "..." : name}
           </h5>

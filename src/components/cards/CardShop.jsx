@@ -4,11 +4,21 @@ import QuickAdd from "../../assets/ouik.png";
 import comIcon from "../../assets/com.png";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
+
 const CardShop = ({ path, pic, name, price, category }) => {
   return (
     <>
       {" "}
-      <div className="card shadow-2xl  p-3 w-full md:w-[263px] lg:w-[300px] bg-white rounded-[12px] relative group duration-200">
+      <motion.div
+        initial={{ x: -250, opacity: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.1, ease: "easeInOut" }}
+        viewport={{ once: false, amount: 0.1 }}
+        className="card shadow-2xl  p-3 w-full  bg-white rounded-[12px] relative group duration-200"
+      >
         <Link to={path}>
           <img src={linkIcon} alt="linkIcon" className="ml-auto" />
         </Link>
@@ -57,7 +67,7 @@ const CardShop = ({ path, pic, name, price, category }) => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

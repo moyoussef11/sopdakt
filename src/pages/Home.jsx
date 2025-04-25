@@ -83,12 +83,12 @@ const Home = () => {
       </main>
       <section
         id="categories"
-        className="py-24 overflow-hidden px-10 sm:px-[100px] md:px-[140px]"
+        className="py-24 overflow-hidden px-10 sm:px-[100px] md:px-[120px]"
       >
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           CATEGORIES
         </h4>
-        <div className="cards scale-90 py-14 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        <div className="cards grid grid-cols-4 gap-4 w-full  py-14">
           <CardCat pic={cat1} name="T-Shirts" />
           <CardCat pic={cat1} name="jeans" />
           <CardCat pic={cat1} name="watches" />
@@ -107,11 +107,11 @@ const Home = () => {
           <div className="relative">
             <Swiper
               slidesPerView={5}
-              spaceBetween={30}
+              spaceBetween={20}
               pagination={{ clickable: true }}
               breakpoints={{
                 0: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                   spaceBetween: 20,
                 },
                 768: {
@@ -129,7 +129,7 @@ const Home = () => {
             >
               <SwiperSlide>
                 <CardProducts
-                  path={"/"}
+                  id={"1"}
                   pic={product1}
                   name={"Hyperadapt Shield Lite"}
                   price={200}
@@ -138,7 +138,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardProducts
-                  path={"/"}
+                  id={"1"}
                   pic={product1}
                   name={"Hyperadapt Shield Lite"}
                   price={200}
@@ -147,7 +147,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardProducts
-                  path={"/"}
+                  id={"1"}
                   pic={product1}
                   name={"Hyperadapt Shield Lite"}
                   price={200}
@@ -156,7 +156,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardProducts
-                  path={"/"}
+                  id={"1"}
                   pic={product1}
                   name={"Hyperadapt Shield Lite"}
                   price={200}
@@ -165,7 +165,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardProducts
-                  path={"/"}
+                  id={"1"}
                   pic={product1}
                   name={"Hyperadapt Shield Lite"}
                   price={200}
@@ -174,7 +174,7 @@ const Home = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <CardProducts
-                  path={"/"}
+                  id={"1"}
                   pic={product1}
                   name={"Hyperadapt Shield Lite"}
                   price={200}
@@ -237,7 +237,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-center justify-center gap-10 flex-wrap">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 md:gap-10 lg:gap-20  w-fit mx-auto">
           <CardFeatureBox
             icon={headphone}
             title="Customer Support"

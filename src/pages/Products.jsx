@@ -26,13 +26,12 @@ const Products = () => {
   return (
     <>
       <MainSection breadcrumb={` CATEGORIES > MEN`} title={"MEN"} />{" "}
-   
-      <div className="px-5 md:px-24 py-14 flex flex-col md:flex-row gap-4 ">
-        <div className="w-full md:w-1/4 p-2">
+      <div className="px-5 lg:px-24 py-14 flex flex-col md:flex-row gap-4 ">
+        <div className="w-full md:w-1/2 lg:w-[20%] p-2">
           <span className="text-[12px] leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">
             249 Products
           </span>
-          <div className="flex items-center justify-between md:flex-col flex-wrap gap-4 mt-5">
+          <div className="flex justify-between md:flex-col flex-wrap gap-4 mt-5">
             <div className="bg-white border-b-2 py-5 border-[#DDDBDC] rounded-lg mt-4">
               <div className="flex justify-between items-center mb-3">
                 <h2 className="text-base font-semibold text-gray-800 custom-font">
@@ -150,8 +149,8 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="w-full products">
-          <div className="flex flex-col gap-1 items-center justify-center md:items-start md:items-start">
+        <div className="w-full bg-red-30 products">
+          <div className="flex flex-col gap-1 items-center justify-center md:items-start">
             {" "}
             <h3 className="md:text-[32px] leading-[40px] font-normal">
               Men’s Clothing & Apparel - New Arrivals
@@ -160,7 +159,7 @@ const Products = () => {
               Featured
             </span>
           </div>
-          <div className="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10">
+          <div className="cards w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             <CardShop
               path={"/"}
               pic={product1}
