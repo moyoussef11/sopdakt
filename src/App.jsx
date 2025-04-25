@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -24,10 +24,15 @@ import BlogDetails from "./pages/BlogDetails.jsx";
 import Login from "./pages/Login.jsx";
 
 function App() {
+  const pathName = useLocation().pathname;
+  const isHidden =
+    pathName.includes("login") || pathName.includes("create-account");
+
   return (
     <>
-      <TopBar />
-      <Header />
+      {!isHidden && <TopBar />}
+      {!isHidden && <Header />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -49,7 +54,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
-      <Footer />
+      {!isHidden && <Footer />}
     </>
   );
 }

@@ -22,11 +22,13 @@ const Signup = () => {
           <div className="h-screen w-full bg-[#FF320054] absolute top-0 left-0"></div>
         </div>
         <div className="w-full absolute top-0 bg-white right-0 md:w-[600px] h-full pt-16 rounded-tl-[60px] rounded-bl-[60px] pb-4 px-10 md:px-20">
-          <img
-            src={logo}
-            className="h-[70px] mb-5 w-[60px]  mx-auto"
-            alt="logo"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              className="h-[70px] mb-5 w-[60px]  mx-auto"
+              alt="logo"
+            />
+          </Link>
           <h3 className="text-[32px] mb-5 font-semibold leading-[41px] uppercase text-center">
             Create an account
           </h3>
