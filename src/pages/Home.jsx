@@ -23,7 +23,7 @@ const Home = () => {
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Pagination, Autoplay]}
-          className="mySwiper custom-swiper-pagination"
+          className="mySwiper w-full custom-swiper-paginations"
         >
           <SwiperSlide>
             <div className="w-full h-[596px] flex flex-col md:flex-row">
@@ -104,7 +104,7 @@ const Home = () => {
           BEST SELLER
         </h4>
         <div className="cards mt-20 my-10">
-          <div className="relative">
+          <div className="relative w-full h-[450px]">
             <Swiper
               slidesPerView={5}
               spaceBetween={20}
@@ -119,13 +119,21 @@ const Home = () => {
                   spaceBetween: 25,
                 },
                 1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+                1100: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+                1400: {
                   slidesPerView: 5,
                   spaceBetween: 30,
                 },
               }}
               loop={true}
               modules={[Pagination]}
-              className="mySwiper custom-swiper-paginations"
+              className="mySwiper w-full h-full custom-swiper-paginations"
             >
               <SwiperSlide>
                 <CardProducts
