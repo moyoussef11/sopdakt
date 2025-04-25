@@ -379,7 +379,7 @@ const Header = () => {
         <div
           className={`md:hidden absolute ${
             isOpen ? "top-[80px]" : "-top-[800px]"
-          } left-0 w-full bg-white z-10 duration-300`}
+          } left-0 w-full bg-white z-50 duration-300`}
         >
           <nav className="block h-full my-5">
             <ul className="flex h-full flex-col items-center flex-wrap gap-[30px]">

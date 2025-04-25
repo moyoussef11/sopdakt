@@ -95,7 +95,7 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
         style={{ padding: 0 }}
       >
         <div className="min-h-screen relative flex flex-col items-center justify-center bg-white p-6">
-          <h1 className="text-[50px] uppercase font-normal text-[#FF3200] text-center">
+          <h1 className="text-[20px] md:text-[50px] uppercase font-normal text-[#FF3200] text-center">
             your perfect size is m{" "}
           </h1>
           <img

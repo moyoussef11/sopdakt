@@ -407,10 +407,10 @@ const Checkout = () => {
         width={850}
       >
         <div className="flex p-1 flex-col gap-5 items-center justify-center">
-          <h4 className="text-2xl text-center md:text-[35px] text-[#FF3200] leading-[24px] md:tracking-[-0.22px] uppercase font-normal">
+          <h4 className="text-2xl text-center md:text-[35px] text-[#FF3200] md:leading-[24px] md:tracking-[-0.22px] uppercase font-normal">
             PLEASE ENTER THE OTP TO CONFIRM YOUR ORDER{" "}
           </h4>
-          <p className="text-[37px] leading-[24px] my-5 md:tracking-[-0.22px]">
+          <p className="text-[25px] text-center md:text-[37px] md:leading-[24px] my-5 md:tracking-[-0.22px]">
             OTP HAS BEEN SEND TO <span>010222225551</span>
           </p>
           <div className="mx-auto block">
