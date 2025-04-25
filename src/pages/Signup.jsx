@@ -21,7 +21,7 @@ const Signup = () => {
           />
           <div className="h-screen w-full bg-[#FF320054] absolute top-0 left-0"></div>
         </div>
-        <div className="w-full absolute top-0 bg-white right-0 md:w-[600px] h-full pt-16 rounded-tl-[60px] rounded-bl-[60px] pb-4 px-10 md:px-20">
+        <div className="w-full absolute top-0 bg-white right-0 md:w-[600px] xl:w-[700px] h-full pt-16 rounded-tl-[60px] rounded-bl-[60px] pb-4 px-10 md:px-20">
           <Link to="/">
             <img
               src={logo}

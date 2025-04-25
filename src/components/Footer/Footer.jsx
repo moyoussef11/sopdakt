@@ -36,7 +36,7 @@ const Footer = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-[240px] h-[267px] mx-auto mt-10"
+            className="h-[100px] md:w-[220px] object-contain md:h-[207px] mx-auto mt-10"
           />
         </div>
         <div className="w-full">

@@ -25,7 +25,7 @@ const CardShop = ({ path, pic, name, price, category }) => {
         <div className="relative">
           <img
             src={pic}
-            className="w-full h-[252px]"
+            className="w-full h-[392px] lg:h-[252px]  object-cover"
             loading="lazy"
             alt={name}
           />

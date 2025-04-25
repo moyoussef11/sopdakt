@@ -8,8 +8,8 @@ const Profile = () => {
       {" "}
       <MainSection breadcrumb={` profile`} title={"profile"} />{" "}
    
-      <div className="py-10 px-5 md:px-24 lg:px-32 flex flex-col md:flex-row gap-5">
-        <div className="w-full md:w-1/4 flex flex-col space-y-7">
+      <div className="py-10 px-5 md:px-24 lg:px-32 flex flex-col lg:flex-row gap-5">
+        <div className="w-full lg:w-1/4 flex flex-col space-y-7">
           <ul className="flex items-center md:items-start md:flex-col justify-center md:justify-start  gap-3 flex-wrap">
             <h4 className="text-[26px] mb-2 leading-[24px] tracking-[0] font-medium">
               Manage My Account
@@ -62,7 +62,7 @@ const Profile = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full">
+        <div className="w-full lg:w-3/4">
           <h4 className="text-[26px] leading-[28px] font-medium text-[#FF3200]">
             Edit Your Profile
           </h4>

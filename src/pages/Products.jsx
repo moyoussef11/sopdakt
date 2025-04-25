@@ -26,8 +26,8 @@ const Products = () => {
   return (
     <>
       <MainSection breadcrumb={` CATEGORIES > MEN`} title={"MEN"} />{" "}
-      <div className="px-5 lg:px-24 py-14 flex flex-col md:flex-row gap-4 ">
-        <div className="w-full md:w-1/2 lg:w-[20%] p-2">
+      <div className="px-5 lg:px-16 xl:px-24 py-14 flex flex-col flex-wrap lg:flex-nowrap lg:flex-row gap-4 ">
+        <div className="w-full lg:w-1/4 bg-white z-10 p-2">
           <span className="text-[12px] leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">
             249 Products
           </span>
@@ -108,7 +108,7 @@ const Products = () => {
             </div>
             <div className="p-4">
               {/* قسم Waist */}
-              <div className="mb-4">
+              <div className="mb-4 ">
                 <h2 className="text-lg font-semibold mb-2">Waist</h2>
                 <div className="flex space-x-2">
                   {waistSizes.map((size) => (
@@ -149,7 +149,7 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="w-full bg-red-30 products">
+        <div className="w-full lg:w-3/4  flex flex-col justify-center products">
           <div className="flex flex-col gap-1 items-center justify-center md:items-start">
             {" "}
             <h3 className="md:text-[32px] leading-[40px] font-normal">
@@ -159,7 +159,7 @@ const Products = () => {
               Featured
             </span>
           </div>
-          <div className="cards w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          <div className="cards w-full md:w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             <CardShop
               path={"/"}
               pic={product1}
