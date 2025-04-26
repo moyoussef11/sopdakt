@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mailIcon from "../assets/icons-mail.png";
 import phoneIcon from "../assets/icons-phone.png";
 import instaIcon from "../assets/Group 198.png";
@@ -6,11 +6,14 @@ import faceIcon from "../assets/Group 200.png";
 import tikIcon from "../assets/Group 199.png";
 import MainSection from "../components/Tabs/MainSection";
 const ContactUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {" "}
       <MainSection breadcrumb={` contact us`} title={"contact us"} />
-      <div className="py-10 scale-90 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
+      <div className="py-1 scale-90 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
         <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-[12px] p-10 flex flex-col gap-5">
           <div className="flex gap-2 items-center">
             <img src={phoneIcon} alt="phoneIcon" loading="lazy" />
@@ -67,7 +70,7 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-      <div className="py-16 scale-90 flex flex-col items-center justify-center">
+      <div className="py-1 scale-90 flex flex-col items-center justify-center">
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           follow us
         </h4>{" "}
@@ -76,7 +79,7 @@ const ContactUs = () => {
             <a href="" target="_blank">
               <img
                 src={instaIcon}
-                className="h-[118.84px]"
+                className="h-16 md:h-[100px]"
                 alt="socialIcon"
                 loading="lazy"
               />
@@ -86,7 +89,7 @@ const ContactUs = () => {
             <a href="" target="_blank">
               <img
                 src={faceIcon}
-                className="h-[118.84px]"
+                className="h-16 md:h-[100px]"
                 alt="socialIcon"
                 loading="lazy"
               />
@@ -96,7 +99,7 @@ const ContactUs = () => {
             <a href="" target="_blank">
               <img
                 src={tikIcon}
-                className="h-[118.84px]"
+                className="h-16 md:h-[100px]"
                 alt="socialIcon"
                 loading="lazy"
               />

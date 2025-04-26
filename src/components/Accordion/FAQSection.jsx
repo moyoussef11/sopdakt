@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
-
 
 const FAQSection = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -8,6 +7,10 @@ const FAQSection = ({ faqs }) => {
   const toggle = (index) => {
     setOpenIndex(index === openIndex ? null : index);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -30,7 +33,7 @@ const FAQSection = ({ faqs }) => {
                 onClick={() => toggle(index)}
                 className="w-full flex justify-between items-center px-6 py-4 text-left"
               >
-                <span className="font-semibold text-sm md:text-base text-black">
+                <span className="font-semibold text-[10px] sm:text-base text-black">
                   {faq.question}
                 </span>
                 {isOpen ? (

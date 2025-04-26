@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import heroImg from "../assets/male-black-oversized-so-fresh-graphic-back-print-t-shirtX 1.png";
 import cat1 from "../assets/shirt.png";
 import product1 from "../assets/product-6.jpg.png";
@@ -16,9 +16,12 @@ import CardProducts from "../components/cards/CardProducts";
 import CardFeatureBox from "../components/cards/CardFeatureBox";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-      <main className="w-full h-[596px]">
+      <main className="w-full">
         <Swiper
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -26,20 +29,20 @@ const Home = () => {
           className="mySwiper w-full custom-swiper-paginations"
         >
           <SwiperSlide>
-            <div className="w-full h-[596px] flex flex-col md:flex-row">
-              <div className="bg-black py-10 h-full w-full md:w-1/2 flex flex-col gap-2 justify-center items-center md:items-start md:px-[100px] text-white">
-                <span className="text-[42px] font-[200] text-center md:text-left">
+            <div className="w-full h-[200px] md:h-[500px] flex flex-row">
+              <div className="bg-black py-10 h-full w-full md:w-1/2 flex flex-col md:gap-2 justify-center items-center md:items-start md:px-[100px] text-white">
+                <span className="text-sm md:text-[42px] font-[200px] text-center md:text-left">
                   Spring / Summer Season
                 </span>
                 <div className="flex items-center gap-1">
-                  <span className="font-bold text-3xl leading-7">
+                  <span className="font-bold md:text-3xl md:leading-7">
                     up <br /> to
                   </span>
-                  <p className="font-bold text-5xl tracking-[5px] uppercase">
+                  <p className="font-bold md:text-5xl md:tracking-[5px] uppercase">
                     50% off
                   </p>
                 </div>
-                <button className="bg-[#FF3200] text-white text-[16.8px] w-[224px] h-[52px] cursor-pointer hover:bg-white hover:text-black duration-300 font-bold leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
+                <button className="bg-[#FF3200] text-sm font-normal text-white md:text-[16.8px] md:w-[224px] md:h-[52px] cursor-pointer hover:bg-white hover:text-black duration-300 md:font-bold md:leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
                   shop now
                 </button>
               </div>
@@ -53,20 +56,20 @@ const Home = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-full h-[596px] flex flex-col md:flex-row">
-              <div className="bg-black py-10 h-full w-full md:w-1/2 flex flex-col gap-2 justify-center items-center md:items-start md:px-[100px] text-white">
-                <span className="text-[42px] font-[200] text-center md:text-left">
+            <div className="w-full h-[200px] md:h-[500px] flex flex-row">
+              <div className="bg-black py-10 h-full w-full md:w-1/2 flex flex-col md:gap-2 justify-center items-center md:items-start md:px-[100px] text-white">
+                <span className="text-sm md:text-[42px] font-[200px] text-center md:text-left">
                   Spring / Summer Season
                 </span>
                 <div className="flex items-center gap-1">
-                  <span className="font-bold text-3xl leading-7">
+                  <span className="font-bold md:text-3xl md:leading-7">
                     up <br /> to
                   </span>
-                  <p className="font-bold text-5xl tracking-[5px] uppercase">
+                  <p className="font-bold md:text-5xl md:tracking-[5px] uppercase">
                     50% off
                   </p>
                 </div>
-                <button className="bg-[#FF3200] text-white text-[16.8px] w-[224px] h-[52px] cursor-pointer hover:bg-white hover:text-black duration-300 font-bold leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
+                <button className="bg-[#FF3200] text-sm font-normal text-white md:text-[16.8px] md:w-[224px] md:h-[52px] cursor-pointer hover:bg-white hover:text-black duration-300 md:font-bold md:leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
                   shop now
                 </button>
               </div>
@@ -83,9 +86,9 @@ const Home = () => {
       </main>
       <section
         id="categories"
-        className="py-24 overflow-hidden px-10 sm:px-[100px] md:px-[120px]"
+        className="py-12 md:py-24 overflow-hidden px-10 sm:px-[100px] md:px-[120px]"
       >
-        <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
+        <h4 className="font-bold uppercase text-[24.8px] sm:text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           CATEGORIES
         </h4>
         <div className="cards grid grid-cols-4 gap-4 w-full  py-14">
@@ -99,11 +102,11 @@ const Home = () => {
           <CardCat pic={cat1} name="watches" />
         </div>
       </section>
-      <section id="best-seller" className="py-20 bg-[#D9D9D9] px-5">
+      <section id="best-seller" className="py-12 md:py-20 bg-[#D9D9D9] px-5">
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           BEST SELLER
         </h4>
-        <div className="cards mt-20 my-10">
+        <div className="cards md:mt-20 my-10">
           <div className="relative w-full h-[450px]">
             <Swiper
               slidesPerView={5}
@@ -217,7 +220,10 @@ const Home = () => {
         </h4>{" "}
         <div className="bg-[#FF3200] p-3 my-10 flex items-center justify-center">
           <div className="my-10 flex flex-col items-center justify-center gap-5 md:gap-10 text-white text-center">
-            <div className="cards py-10 flex items-center justify-center gap-5 md:gap-10 flex-wrap">
+            <div
+              className="cards py-10 grid grid-cols-2 md:grid-cols-3 gap-5"
+              // className="cards py-10 flex items-center justify-center gap-5 md:gap-10 flex-wrap"
+            >
               <CardProducts
                 path={"/"}
                 pic={product1}

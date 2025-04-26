@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import MainSection from "../components/Tabs/MainSection";
 
 const Profile = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {" "}
       <MainSection breadcrumb={` profile`} title={"profile"} />{" "}
-   
       <div className="py-10 px-5 md:px-24 lg:px-32 flex flex-col lg:flex-row gap-5">
         <div className="w-full lg:w-1/4 flex flex-col space-y-7">
           <ul className="flex items-center md:items-start md:flex-col justify-center md:justify-start  gap-3 flex-wrap">

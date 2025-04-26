@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import pro from "../assets/pro.png";
 import { Link } from "react-router-dom";
 import MainSection from "../components/Tabs/MainSection";
 const Cart = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       {" "}

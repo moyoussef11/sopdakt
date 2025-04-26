@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import comparImg from "../assets/compare.png";
 import comparIcon from "../assets/compareIcon.png";
 import { Link } from "react-router-dom";
@@ -60,11 +60,13 @@ const rows = [
 ];
 
 const Compare = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {" "}
       <MainSection breadcrumb={` compare`} title={"compare"} />
-      
       <div className="py-10 md:py-24">
         <div className="max-w-[1200px] mx-auto overflow-x-auto">
           <table className="table-auto border-separate border-spacing-0 w-full text-sm">

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import FAQSection from "../components/Accordion/FAQSection";
 import MainSection from "../components/Tabs/MainSection";
 
@@ -70,11 +71,13 @@ const faqs = [
 ];
 
 const Faqs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {" "}
       <MainSection breadcrumb={` faqs`} title={"faqs"} />
-     
       <section id="accordion" className="py-5 md:py-14 px-5 md:px-24">
         <FAQSection faqs={faqs} />
       </section>

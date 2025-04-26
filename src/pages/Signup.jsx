@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../assets/logo.png";
 import authImg from "../assets/auth.png";
 import deviderImg from "../assets/Divider.png";
@@ -8,6 +8,9 @@ import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 const Signup = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [passwordVisible, setPasswordVisible] = React.useState(false);
 
   return (

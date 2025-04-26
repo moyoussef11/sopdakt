@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import herpAbout from "../assets/herpAbout.png";
 import service1 from "../assets/Services.png";
 import service2 from "../assets/Services2.png";
@@ -10,6 +10,9 @@ import { motion, useInView } from "framer-motion";
 import MainSection from "../components/Tabs/MainSection";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: false,
@@ -20,18 +23,17 @@ const AboutUs = () => {
       <MainSection breadcrumb={`ABOUT US`} title={"ABOUT US"} />
 
       <main
-        className="w-full h-[700px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
+        className="w-full h-[400px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
         style={{
           backgroundImage: `url(${herpAbout})`,
         }}
       >
         <div className="h-full w-full absolute bg-[#FF32006B]"></div>
-
-        <h4 className="text-5xl sm:text-[70px] relative font-bold text-white text-center md:leading-[84px] tracking-[0.2px] uppercase">
+        <h4 className="text-3xl sm:text-[50px] relative font-bold text-white text-center md:leading-[54px] md:tracking-[0.2px] uppercase">
           We believe <br /> we can all make <br /> a difference.
         </h4>
       </main>
-      <section id="our-story" className="py-14 px-5 md:px-24">
+      <section id="our-story" className="py-1 px-5 md:px-24">
         <div className="max-w-[1100px] scale-90 mx-auto">
           <h4 className="text-[54px] mb-5 leading-[64px] md:tracking-[49px] text-[#FF3200] text-center font-bold uppercase">
             Our Story
@@ -50,34 +52,34 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <section id="vision" className="py-14 px-5 md:px-8 lg:px-24">
+      <section id="vision" className="py-1 px-5 md:px-8 lg:px-24">
         <div className="flex scale-90 gap-8 flex-col flex-wrap md:flex-row lg:flex-nowrap">
           <div className="max-w-[1100px] mx-auto flex flex-col gap-10">
             <div className="w-full bg-white rounded-[11px] shadow-2xl p-6">
-              <h5 className="uppercase text-[54px] leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
+              <h5 className="uppercase text-3xl md:text-[54px] md:leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
                 VISION
               </h5>
-              <p className="font-normal text-[#282D3B] uppercase text-[28px] leading-[39px] tracking-[0] text-center md:text-left">
+              <p className="font-normal text-[#282D3B] uppercase text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
                 Lorem Ipsum is simply dummy text of the printingand typesetting
                 industry. has been the industry’ standard dummy
               </p>
             </div>
             <div className="w-full bg-white rounded-[11px] shadow-2xl p-6">
-              <h5 className="uppercase text-[54px] leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
+              <h5 className="uppercase text-3xl md:text-[54px] md:leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
                 MISION
               </h5>
-              <p className="font-normal text-[#282D3B] uppercase text-[28px] leading-[39px] tracking-[0] text-center md:text-left">
+              <p className="font-normal text-[#282D3B] uppercase text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
                 Lorem Ipsum is simply dummy text of the printingand typesetting
                 industry. has been the industry’ standard dummy
               </p>
             </div>
           </div>
           <div className="w-full lg:w-1/4">
-            <div className="w-full h-full bg-black text-white rounded-[11px] shadow-2xl p-6">
-              <h5 className="uppercase text-[54px] leading-[64px] tracking-[13px] font-bold  text-center md:text-left mb-7">
+            <div className="w-full bg-black text-white rounded-[11px] shadow-2xl p-6">
+              <h5 className="uppercase text-3xl md:text-[54px] text-[54px] md:leading-[64px] tracking-[13px] font-bold  text-center md:text-left mb-7">
                 VALUES
               </h5>
-              <p className="font-normal uppercase text-[28px] leading-[39px] tracking-[0] text-center md:text-left">
+              <p className="font-normal uppercase text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
                 Lorem Ipsum is simply dummy text of the printingand typesetting
                 industry. has been the industry’ standard dummy
               </p>
@@ -129,7 +131,7 @@ const AboutUs = () => {
           >
             {/* Vertical "FOUNDER" text */}
             <div className="flex items-start px-4 bg-white">
-              <p className="[writing-mode:vertical-rl] rotate-180 text-[#FF3200] text-[54px] font-semibold  leading-[64px] tracking-[15px] sm:tracking-[30px]  uppercase">
+              <p className="[writing-mode:vertical-rl] rotate-180 text-[#FF3200] text-3xl sm:text-[54px] font-semibold  leading-[64px] tracking-[15px] sm:tracking-[30px]  uppercase">
                 Founder
               </p>
             </div>

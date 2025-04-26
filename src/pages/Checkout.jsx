@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Select, Checkbox } from "antd";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
 import MainSection from "../components/Tabs/MainSection";
 
 const Checkout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {

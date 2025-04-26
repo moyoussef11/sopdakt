@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import failedPic from "../assets/failed.png";
 import donePic from "../assets/Scene-1.gif";
 const Verify = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [status, setStatus] = useState(false);
   return (
     <>

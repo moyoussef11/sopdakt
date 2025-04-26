@@ -22,6 +22,7 @@ import SessionExpired from "./pages/SessionExpired.jsx";
 import Signup from "./pages/Signup.jsx";
 import BlogDetails from "./pages/BlogDetails.jsx";
 import Login from "./pages/Login.jsx";
+import Subscribers from "./components/Tabs/Subscribers.jsx";
 
 function App() {
   const pathName = useLocation().pathname;
@@ -30,8 +31,9 @@ function App() {
 
   return (
     <>
+      <Subscribers />
       {!isHidden && <TopBar />}
-      {!isHidden && <Header />}
+      <Header />{" "}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />

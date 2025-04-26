@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Table, Button } from "antd";
 import pro from "../assets/pro.png";
 import closeWhite from "../assets/closeWihte.png";
@@ -107,6 +107,9 @@ const data = [
 ];
 
 const Wishlist = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [size, setSize] = React.useState(window.innerWidth);
   React.useEffect(() => {
     const handleResize = () => {
@@ -157,7 +160,10 @@ const Wishlist = () => {
               (e.currentTarget.style.backgroundColor = "#fff")
             }
           >
-            <span className=" text-[10px] md:text-[13px] font-bold"> QUICK VIEW</span>
+            <span className=" text-[10px] md:text-[13px] font-bold">
+              {" "}
+              QUICK VIEW
+            </span>
           </Button>
 
           <Button

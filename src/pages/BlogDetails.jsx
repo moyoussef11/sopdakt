@@ -8,20 +8,24 @@ import linkedIcon from "../assets/linkedBlog.png";
 import googleIcon from "../assets/googleBlog.png";
 import { FaRegUser } from "react-icons/fa";
 import CardBlog from "../components/cards/CardBlog";
+import { useEffect } from "react";
 
 const BlogDetails = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
       {" "}
       <MainSection breadcrumb={`BLOG > blog name`} title={"blog name"} />
-      <section className="py-20 px-5 md:px-16 lg:px-32">
+      <section className="py-5 md:py-20 px-5 md:px-16 lg:px-32">
         <h4 className="text-[41px] text-center leading-[27px] md:tracking-[10px] uppercase font-medium">
           Fashion Trends
         </h4>
         <div className="my-8">
           <div
             style={{ backgroundImage: `url(${blogImg})` }}
-            className="max-w-[1000px] h-[572px] mx-auto rounded-[11px] bg-no-repeat bg-cover"
+            className="max-w-[1000px] h-[400px] md:h-[572px] mx-auto rounded-[11px] bg-no-repeat bg-cover"
           >
             {" "}
             {/* <img
@@ -116,7 +120,7 @@ const BlogDetails = () => {
       </section>
       <section
         id="RELATED BLOGS"
-        className="px-5 overflow-hidden md:px-16 mx-auto lg:px-32 py-20"
+        className="px-5 overflow-hidden md:px-16 mx-auto lg:px-32 py-5 md:py-20"
       >
         <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           RELATED BLOGS

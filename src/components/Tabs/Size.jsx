@@ -79,7 +79,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <th
                         key={size.label}
-                        className="border border-gray-300 p-2"
+                        className="border border-gray-300 p-2 "
                       >
                         {size.label}
                       </th>
@@ -94,20 +94,20 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <td
                         key={size.label}
-                        className="border border-gray-300 p-2 text-center"
+                        className="border border-gray-300 font-bold p-2 text-center"
                       >
                         {size.inch.length}
                       </td>
                     ))}
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2 font-medium">
+                    <td className="border border-gray-300  p-2 font-medium">
                       B Bust
                     </td>
                     {sizes.map((size) => (
                       <td
                         key={size.label}
-                        className="border border-gray-300 p-2 text-center"
+                        className="border border-gray-300 p-2 font-bold text-center"
                       >
                         {size.inch.bust}
                       </td>
@@ -120,7 +120,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <td
                         key={size.label}
-                        className="border border-gray-300 p-2 text-center"
+                        className="border border-gray-300 p-2 font-bold text-center"
                       >
                         {size.inch.shoulder}
                       </td>
@@ -142,7 +142,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <th
                         key={size.label}
-                        className="border border-gray-300 p-2"
+                        className="border border-gray-300  p-2"
                       >
                         {size.label}
                       </th>
@@ -157,7 +157,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <td
                         key={size.label}
-                        className="border border-gray-300 p-2 text-center"
+                        className="border border-gray-300 p-2 font-bold text-center"
                       >
                         {size.cm.length}
                       </td>
@@ -170,7 +170,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <td
                         key={size.label}
-                        className="border border-gray-300 p-2 text-center"
+                        className="border border-gray-300 p-2 font-bold text-center"
                       >
                         {size.cm.bust}
                       </td>
@@ -183,7 +183,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                     {sizes.map((size) => (
                       <td
                         key={size.label}
-                        className="border border-gray-300 p-2 text-center"
+                        className="border border-gray-300 p-2 font-bold text-center"
                       >
                         {size.cm.shoulder}
                       </td>

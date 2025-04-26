@@ -9,10 +9,10 @@ const Footer = () => {
     <footer>
       <div className="bg-[#FF3200] py-20 md:px-32 flex flex-col flex-wrap lg:flex-nowrap justify-center md:flex-row items-center gap-5">
         <div className="w-full lg:w-1/2 text-center md:text-left">
-          <h4 className="text-[36px] tracking-[4%] text-white font-bold uppercase">
+          <h4 className="text-[20px] md:text-[36px] tracking-[4%] text-white font-bold uppercase">
             subscribe newsletter
           </h4>
-          <p className="text-[24px] text-white tracking-[0]">
+          <p className="md:text-[24px] text-white tracking-[0]">
             Get all the latest information on Events, Sales and Offers.
           </p>
         </div>
@@ -39,7 +39,7 @@ const Footer = () => {
             className="h-[100px] md:w-[220px] object-contain md:h-[207px] mx-auto mt-10"
           />
         </div>
-        <div className="w-full">
+        <div className="w-full flex flex-col">
           <ul className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5">
             <li>
               <Link

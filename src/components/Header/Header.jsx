@@ -363,19 +363,7 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        <div className="md:hidden cursor-pointer z-20">
-          {isOpen ? (
-            <IoMdClose
-              className="w-[30px] h-[30px] cursor-pointer text-[#FF3200]"
-              onClick={() => setIsOpen(!isOpen)}
-            />
-          ) : (
-            <CiMenuBurger
-              className="w-[30px] h-[30px] cursor-pointer text-[#FF3200]"
-              onClick={() => setIsOpen(!isOpen)}
-            />
-          )}
-        </div>
+
         <div
           className={`md:hidden absolute ${
             isOpen ? "top-[80px]" : "-top-[800px]"
@@ -684,30 +672,47 @@ const Header = () => {
                     <CiHeart className="w-[24px] h-[24px]" />
                   </Link>
                 </li>
-                <li>
-                  <Link to="/">
-                    <IoIosSearch className="w-[24px] h-[24px]" />
-                  </Link>
-                </li>
+                
                 <li onClick={() => setIsOpen(false)} className="w-fit">
                   <Link to="/compare">
                     <img src={compare} alt="compareIcon" className="w-[24px]" />
                   </Link>
                 </li>
-                <li className="w-fit">
-                  <Link
-                    onClick={() => setIsOpen(false)}
-                    to="/cart"
-                    className="relative"
-                  >
-                    <span className="absolute -right-1 bg-[#FF5B5B] w-[16px] h-[16px] rounded-[8px] text-center text-[11px]">
-                      0
-                    </span>
-                    <img src={cart} alt="userIcon" className="w-[24px]" />
-                  </Link>
-                </li>
+              
               </ul>
             </div>
+          </div>
+        </div>
+
+        <div className="flex md:hidden items-center gap-5">
+          <ul className="flex md:hidden flex-wrap shrink-0 items-center gap-[10px]">
+            <li>
+              <Link to="/">
+                <IoIosSearch className="w-[24px] h-[24px]" />
+              </Link>
+            </li>
+
+            <li className="w-fit">
+              <Link to="/cart" className="relative">
+                <span className="absolute -right-1 bg-[#FF5B5B] w-[16px] h-[16px] rounded-[8px] text-center text-[11px]">
+                  0
+                </span>
+                <img src={cart} alt="userIcon" className="w-[24px]" />
+              </Link>
+            </li>
+          </ul>
+          <div className="md:hidden cursor-pointer z-20">
+            {isOpen ? (
+              <IoMdClose
+                className="w-[30px] h-[30px] cursor-pointer text-[#FF3200]"
+                onClick={() => setIsOpen(!isOpen)}
+              />
+            ) : (
+              <CiMenuBurger
+                className="w-[30px] h-[30px] cursor-pointer text-[#FF3200]"
+                onClick={() => setIsOpen(!isOpen)}
+              />
+            )}
           </div>
         </div>
       </header>

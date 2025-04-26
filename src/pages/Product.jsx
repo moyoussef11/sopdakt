@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import pro1 from "../assets/product1.png";
 import pro2 from "../assets/product2.png";
 import pro3 from "../assets/product3.png";
@@ -84,6 +84,9 @@ const faqs = [
 ];
 
 const Product = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [mainImage, setMainImage] = useState(pro1);
   const [openSize, setOpenSize] = useState(false);
   const [openSizeRec, setOpenSizeRec] = useState(false);
@@ -105,12 +108,12 @@ const Product = () => {
       </div>
       <div className="hero overflow-hidden px-5 md:px-24 py-5 md:py-10 flex flex-col md:flex-row items-center gap-10">
         <div className="w-full py-10 md:w-1/2 flex flex-col md:flex-row gap-4 items-center justify-center">
-          <div className="imgs md:flex grid grid-cols-2 md:flex-wrap items-center justify-center md:flex-col gap-2 md:gap-5">
+          <div className="imgs md:flex flex items-center gap-5 flex-wrap justify-center md:flex-col md:gap-2 md:gap-5">
             <img
               src={pro1}
               alt="productImg"
               onClick={() => setMainImage(pro1)}
-              className={` md:w-[170px] rounded-[13px] cursor-pointer ${
+              className={`h-[100px] md:h-full md:w-[170px] rounded-[13px] cursor-pointer ${
                 mainImage === pro1
                   ? "border border-[#FF3200]"
                   : "border border-transparent hover:border-[#FF3200]"
@@ -121,7 +124,7 @@ const Product = () => {
               src={pro2}
               alt="productImg"
               onClick={() => setMainImage(pro2)}
-              className={` md:w-[170px] rounded-[13px] cursor-pointer ${
+              className={`h-[100px] md:h-full md:w-[170px] rounded-[13px] cursor-pointer ${
                 mainImage === pro2
                   ? "border border-[#FF3200]"
                   : "border border-transparent hover:border-[#FF3200]"
@@ -132,7 +135,7 @@ const Product = () => {
               src={pro3}
               alt="productImg"
               onClick={() => setMainImage(pro3)}
-              className={` md:w-[170px] rounded-[13px] cursor-pointer ${
+              className={`h-[100px] md:h-full md:w-[170px] rounded-[13px] cursor-pointer ${
                 mainImage === pro3
                   ? "border border-[#FF3200]"
                   : "border border-transparent hover:border-[#FF3200]"
@@ -144,7 +147,7 @@ const Product = () => {
             <img
               src={mainImage}
               alt="productImg"
-              className="rounded-[13px] md:h-[620px] w-full object-contain"
+              className="rounded-[13px] h-[400px] md:h-[620px] w-full object-contain"
               loading="lazy"
             />
           </div>
@@ -156,7 +159,6 @@ const Product = () => {
             x: isInView || window.innerWidth < 768 ? 0 : 360,
             opacity: isInView || window.innerWidth < 768 ? 1 : 0,
           }}
-          
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="w-full  md:w-1/2"
         >

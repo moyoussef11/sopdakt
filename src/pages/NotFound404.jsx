@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import notFoundPic from "../assets/404.png";
 import { Link } from "react-router-dom";
 import MainSection from "../components/Tabs/MainSection";
 const NotFound404 = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <MainSection breadcrumb={` 404`} title={"404"} />

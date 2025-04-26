@@ -18,11 +18,11 @@ const CardFeatureBox = ({ icon, title, subtitle }) => {
           : { scale: 0.8, opacity: 0, y: 30 }
       }
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[239px] lg:h-[239px] bg-white rounded-full shadow-xl flex flex-col items-center justify-center  overflow-hidden gap-1"
+      className="w-[120px] p-1 h-[120px] sm:w-[150px] sm:h-[150px] md:w-[180px] md:h-[180px] lg:w-[239px] lg:h-[239px] bg-white rounded-full shadow-xl flex flex-col items-center justify-center  overflow-hidden gap-1"
     >
       <img
         src={icon}
-        className="h-8 w-8 sm:h-8 sm:w-8 md:h-[60px] md:w-[60px]"
+        className="h-5 w-5 my-2 sm:h-8 sm:w-8 md:h-[60px] md:w-[60px]"
         alt={`${title}Icon`}
         loading="lazy"
       />

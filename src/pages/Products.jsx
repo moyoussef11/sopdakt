@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import product1 from "../assets/shirtShop.png";
 import CardShop from "../components/cards/CardShop";
@@ -18,6 +18,9 @@ const filters = {
 };
 
 const Products = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [selectedWaist, setSelectedWaist] = useState(null);
   const [selectedClothing, setSelectedClothing] = useState(null);
 
