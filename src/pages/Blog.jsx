@@ -47,7 +47,10 @@ const Blog = () => {
           />
         </form>
         <div className="flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap gap-5 my-24">
-          <div className="cards w-full grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+          <div
+            className="cards w-full grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
+            // className="cards w-full grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
+          >
             <CardBlog
               id={"1"}
               blogImg={blogImg}

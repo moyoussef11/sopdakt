@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-[#FF3200] py-20 md:px-32 flex flex-col flex-wrap lg:flex-nowrap justify-center md:flex-row items-center gap-5">
+      <div className="bg-[#FF3200] py-6 md:py-20 md:px-32 flex flex-col flex-wrap lg:flex-nowrap justify-center md:flex-row items-center gap-5">
         <div className="w-full lg:w-1/2 text-center md:text-left">
           <h4 className="text-[20px] md:text-[36px] tracking-[4%] text-white font-bold uppercase">
             subscribe newsletter
@@ -31,16 +31,19 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="bg-black py-10 md:px-32 flex flex-col md:flex-row justify-center gap-5">
+      <div className="bg-black md:py-10 md:px-32 flex flex-col md:flex-row justify-center gap-5">
         <div className="w-full md:w-[25%]">
           <img
             src={logo}
             alt="logo"
-            className="h-[100px] md:w-[220px] object-contain md:h-[207px] mx-auto mt-10"
+            className="h-[50px] md:w-[220px] object-contain md:h-[207px] mx-auto mt-10"
           />
         </div>
         <div className="w-full flex flex-col">
-          <ul className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5">
+          <ul
+            className="flex w-full flex-row justify-center items-center md:justify-start flex-wrap gap-5"
+            // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
+          >
             <li>
               <Link
                 to="/about-us"
@@ -114,7 +117,7 @@ const Footer = () => {
               </div>
             </li>
           </ul>
-          <ul className="text-white my-10 flex flex-col gap-2 text-center md:text-left">
+          <ul className="text-white my-3 md:my-10 flex flex-wrap gap-3 justify-center md:flex-col md:gap-2 text-center md:text-left">
             <li>Email: info@NNGHTJcom</li>
             <li>Phone: 555-567-8901</li>
             <li>
@@ -122,8 +125,8 @@ const Footer = () => {
             </li>
           </ul>
           <hr className="border border-white" />
-          <div className="text-white flex items-center  justify-between flex-col md:flex-row gap-5 py-5">
-            <div className="flex flex-wrap justify-center items-center gap-6 py-10">
+          <div className="text-white flex items-center  justify-between flex-col md:flex-row gap-5 my-3 md:py-5">
+            <div className="flex flex-wrap justify-center items-center gap-6 my-2 md:py-10">
               <span>© 2025 pd. All Rights Reserved.</span>
               <span>
                 Devolped with ♡ by{" "}

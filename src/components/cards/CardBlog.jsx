@@ -24,7 +24,7 @@ const CardBlog = ({
         <div className="top relative rounded-[11px]">
           <img
             src={blogImg}
-            className="h-[300px] w-full  rounded-[11px]"
+            className="sm:h-[250px] md:h-[300px] w-full object-cover  rounded-[11px]"
             alt={title}
           />
           <p className="text-white text-[20px] leading-[19px] uppercase font-semibold rounded-full text-center flex items-center justify-center w-fit p-3 absolute left-3 top-3 bg-[#FF3200]">
