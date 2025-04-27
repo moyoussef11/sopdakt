@@ -10,7 +10,7 @@ const CardOffer = ({ pic1, pic2, title, offer, desc }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ x: 100, opacity: 0 }}
+      initial={{ x: 50, opacity: 0 }}
       animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="card shadow-2xl flex flex-col items-center justify-between rounded-[12px]"

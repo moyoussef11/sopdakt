@@ -28,7 +28,7 @@ const Footer = () => {
               name=""
               id=""
             />
-            <button className="bg-black text-center text-white py-2 px-10 rounded-xl uppercase font-bold cursor-pointer">
+            <button className="bg-black text-center w-fit text-white py-2 px-5  md:px-10 rounded-xl uppercase font-bold cursor-pointer">
               subscribe
             </button>
           </form>
