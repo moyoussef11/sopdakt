@@ -1,5 +1,6 @@
 import MainSection from "../components/Tabs/MainSection";
 import blogImg from "../assets/fashionTrends.png";
+import bloggImg from "../assets/blogg.jpg";
 import userImg from "../assets/personblog.jpg";
 import shareIcon from "../assets/shareBlog.png";
 import faceIcon from "../assets/faceBlog.png";
@@ -128,7 +129,7 @@ const BlogDetails = () => {
         <div className="cards my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           <CardBlog
             id={"1"}
-            blogImg={blogImg}
+            blogImg={bloggImg}
             title={"Fashion Trends"}
             author="mohamed"
             blogPersonImg={userImg}
@@ -139,7 +140,7 @@ const BlogDetails = () => {
           />
           <CardBlog
             id={"1"}
-            blogImg={blogImg}
+            blogImg={bloggImg}
             title={"Fashion Trends"}
             author="mohamed"
             blogPersonImg={userImg}

@@ -6,6 +6,7 @@ import { GrFormClose } from "react-icons/gr";
 import { Input } from "antd";
 import blogImg from "../assets/blog1.png";
 import blogPersonImg from "../assets/personblog.jpg";
+import bloggImg from "../assets/blogg.jpg";
 import filterImg from "../assets/Filter.png";
 import CardBlog from "../components/cards/CardBlog";
 
@@ -53,7 +54,7 @@ const Blog = () => {
           >
             <CardBlog
               id={"1"}
-              blogImg={blogImg}
+              blogImg={bloggImg}
               title={"Fashion Trends"}
               author="mohamed"
               blogPersonImg={blogPersonImg}
@@ -64,7 +65,7 @@ const Blog = () => {
             />
             <CardBlog
               id={"1"}
-              blogImg={blogImg}
+              blogImg={bloggImg}
               title={"Fashion Trends"}
               author="mohamed"
               blogPersonImg={blogPersonImg}
@@ -75,7 +76,7 @@ const Blog = () => {
             />
             <CardBlog
               id={"1"}
-              blogImg={blogImg}
+              blogImg={bloggImg}
               title={"Fashion Trends"}
               author="mohamed"
               blogPersonImg={blogPersonImg}
