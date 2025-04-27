@@ -31,6 +31,7 @@ const Subscribers = () => {
         footer={null}
         width={800}
         className="!p-0 !py-0 m-0"
+        centered
       >
         <div className="bg-white rounded-lg overflow-hidden flex w-full md:h-[400px] max-w-3xl relative">
           {/* Left Side - Image */}
@@ -57,7 +58,7 @@ const Subscribers = () => {
               className="rounded-lg p-3 w-full mb-2 md:mb-4 shadow-2xl"
             />
 
-            <button className="bg-[#FF3200] w-fit mx-auto  hover:bg-white hover:text-black shadow-2xl cursor-pointer text-white rounded-lg p-1 md:p-3 font-bold  transition">
+            <button className="bg-[#FF3200] text-sm md:text-base w-fit mx-auto  hover:bg-white hover:text-black shadow-2xl cursor-pointer text-white rounded-lg p-2 md:p-3 font-bold  transition">
               SUBSCRIBE
             </button>
           </div>

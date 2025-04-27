@@ -8,7 +8,7 @@ const data = [
   {
     key: "1",
     product: (
-      <div className="flex items-center gap-10 flex-wrap md:flex-nowrap">
+      <div className="flex items-center gap-2 md:gap-10 flex-wrap md:flex-nowrap">
         <div className="relative bg-[#E7E7E7] flex items-center justify-center p-2 rounded-xl">
           <img
             src={closeWhite}
@@ -22,7 +22,7 @@ const data = [
             className="h-[60px] w-[50px]"
           />
         </div>
-        <span className="text-[14px] leading-[24.5px] capitalize">
+        <span className="text-[14px] md:leading-[24.5px] capitalize">
           Men Black Gentle Belt
         </span>
       </div>
@@ -41,7 +41,7 @@ const data = [
   {
     key: "2",
     product: (
-      <div className="flex items-center gap-10 flex-wrap md:flex-nowrap">
+      <div className="flex items-center gap-2 md:gap-10 flex-wrap md:flex-nowrap">
         <div className="relative bg-[#E7E7E7] flex items-center justify-center p-2 rounded-xl">
           <img
             src={closeWhite}
@@ -55,7 +55,7 @@ const data = [
             className="h-[60px] w-[50px]"
           />
         </div>
-        <span className="text-[14px] leading-[24.5px] capitalize">
+        <span className="text-[14px] md:leading-[24.5px] capitalize">
           Men Black Gentle Belt
         </span>
       </div>
@@ -74,7 +74,7 @@ const data = [
   {
     key: "3",
     product: (
-      <div className="flex items-center gap-10 flex-wrap md:flex-nowrap">
+      <div className="flex items-center gap-2 md:gap-10 flex-wrap md:flex-nowrap">
         <div className="relative bg-[#E7E7E7] flex items-center justify-center p-2 rounded-xl">
           <img
             src={closeWhite}
@@ -88,7 +88,7 @@ const data = [
             className="h-[60px] w-[50px]"
           />
         </div>
-        <span className="text-[14px] leading-[24.5px] capitalize">
+        <span className="text-[14px] md:leading-[24.5px] capitalize">
           Men Black Gentle Belt
         </span>
       </div>
@@ -170,8 +170,9 @@ const Wishlist = () => {
             style={{
               backgroundColor: "#FF3200", // = bg-red-500
               color: "#FFFFFF", // = text-white
-              padding: size < 768 ? "1px" : "10px 40px",
+              padding: size < 768 ? "10px" : "10px 40px",
             }}
+
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor = "#DC2626")
             } // = hover:bg-red-600

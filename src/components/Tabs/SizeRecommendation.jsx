@@ -35,8 +35,8 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
         closable={false}
         style={{ padding: 0 }}
       >
-        <div className="min-h-screen relative flex flex-col items-center justify-center bg-white p-6">
-          <h1 className="text-[50px] font-normal text-[#FF3200] mb-8 text-center">
+        <div className="relative flex flex-col items-center justify-center bg-white p-6">
+          <h1 className="text-[30px] md:text-[50px] font-normal text-[#FF3200]  text-center">
             Size Recomandtion
           </h1>
           <img
@@ -50,7 +50,7 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
             {fields.map(({ label, options }) => {
               const fieldId = label.toLowerCase();
               return (
-                <div key={label} className="mb-5">
+                <div key={label} className="">
                   <label className="block mb-1 font-medium">{label}</label>
                   <div className="relative border border-orange-500 rounded-md flex items-center">
                     <img src={outlineIcon} alt="outlineIcon" className="mx-2" />
@@ -79,7 +79,7 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
             <button
               type="submit"
               onClick={() => setPerfect(true)}
-              className="w-full bg-[#FF3200] cursor-pointer hover:bg-white hover:shadow-2xl md:w-[170px] mx-auto block uppercase text-white hover:text-black py-3 rounded-md font-bold text-lg transition"
+              className="w-full bg-[#FF3200] my-3 cursor-pointer hover:bg-white hover:shadow-2xl md:w-[170px] mx-auto block uppercase text-white hover:text-black py-3 rounded-md font-bold text-lg transition"
             >
               countiue
             </button>
@@ -94,7 +94,7 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
         closable={false}
         style={{ padding: 0 }}
       >
-        <div className="min-h-screen relative flex flex-col items-center justify-center bg-white p-6">
+        <div className=" relative flex flex-col items-center justify-center bg-white p-6">
           <h1 className="text-[20px] md:text-[50px] uppercase font-normal text-[#FF3200] text-center">
             your perfect size is m{" "}
           </h1>

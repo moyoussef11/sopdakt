@@ -17,7 +17,10 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <form className="w-full md:w-[700px] flex flex-wrap lg:flex-nowrap  flex-col md:flex-row justify-between items-center gap-2">
+          <form
+            className="w-full md:w-[700px]  grid grid-cols-[1fr_150px]  gap-2"
+            // className="w-full md:w-[700px] flex flex-wrap lg:flex-nowrap  flex-col md:flex-row justify-between items-center gap-2"
+          >
             <input
               type="text"
               placeholder="Email address..."
@@ -25,14 +28,14 @@ const Footer = () => {
               name=""
               id=""
             />
-            <button className="bg-black text-white py-2 px-10 rounded-xl uppercase font-bold cursor-pointer">
+            <button className="bg-black text-center text-white py-2 px-10 rounded-xl uppercase font-bold cursor-pointer">
               subscribe
             </button>
           </form>
         </div>
       </div>
       <div className="bg-black md:py-10 md:px-32 flex flex-col md:flex-row justify-center gap-5">
-        <div className="w-full md:w-[25%]">
+        <div className="w-full hidden md:block md:w-[25%]">
           <img
             src={logo}
             alt="logo"
@@ -40,66 +43,90 @@ const Footer = () => {
           />
         </div>
         <div className="w-full flex flex-col">
+          <div className="flex items-center mx-auto gap-5 justify-between">
+            <img src={logo} alt="logo" className="h-28 md:hidden" />
+            <ul
+              className="flex my-2 w-full  justify-center items-center flex-col md:flex-row md:justify-start flex-wrap gap-0 md:gap-5"
+              // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
+            >
+              <li>
+                <Link
+                  to="/about-us"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  Services{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  Industries{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  Our clients{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  Blog{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Career"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  Career{" "}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact-Us"
+                  className="text-[12px] md:text-[24px] leading-[28px] capitalize text-white"
+                >
+                  Contact Us{" "}
+                </Link>
+              </li>
+              <li className="hidden md:block">
+                <div className="flex gap-2 items-center">
+                  <a href="" target="_blank">
+                    {" "}
+                    <img src={insta} alt="socialIcons" loading="lazy" />
+                  </a>
+                  <a href="" target="_blank">
+                    {" "}
+                    <img src={face} alt="socialIcons" loading="lazy" />
+                  </a>
+                  <a href="" target="_blank">
+                    {" "}
+                    <img src={tik} alt="socialIcons" loading="lazy" />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
           <ul
-            className="flex w-full flex-row justify-center items-center md:justify-start flex-wrap gap-5"
+            className="flex w-full md:hidden  justify-center items-center flex-col md:flex-row md:justify-start flex-wrap md:gap-5"
             // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
           >
-            <li>
-              <Link
-                to="/about-us"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                Services{" "}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                Industries{" "}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                Our clients{" "}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                Blog{" "}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Career"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                Career{" "}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact-Us"
-                className="text-[24px] leading-[28px] capitalize text-white"
-              >
-                Contact Us{" "}
-              </Link>
-            </li>
             <li>
               <div className="flex gap-2 items-center">
                 <a href="" target="_blank">

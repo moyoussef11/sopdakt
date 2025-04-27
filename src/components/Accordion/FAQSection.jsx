@@ -37,9 +37,9 @@ const FAQSection = ({ faqs }) => {
                   {faq.question}
                 </span>
                 {isOpen ? (
-                  <FiChevronDown className="text-white w-8 h-8 rounded-full text-xl bg-[#FF3200]" />
+                  <FiChevronDown className="text-white  cursor-pointer rounded-full text-xl bg-[#FF3200]" />
                 ) : (
-                  <FiChevronRight className="text-red-500 w-8 h-8 rounded-full bg-white shadow text-xl" />
+                  <FiChevronRight className="text-red-500  cursor-pointer rounded-full bg-white shadow text-xl" />
                 )}
               </button>
               {isOpen && (

@@ -33,13 +33,13 @@ const CardProductLike = ({ id, pic, name, price, category }) => {
           <div className="w-full h-full absolute bg-white opacity-0 group-hover:opacity-35"></div>
           <div className="flex z-10 items-center flex-col justify-center gap-2">
             <div className="flex items-center flex-wrap md:flex-nowrap justify-center gap-2">
-              <span className="text-black p-[12px] uppercase w-[40px] h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
+              <span className="text-black md:p-[12px] uppercase w-[20px] h-[20px] md:w-[40px] md:h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
                 m
               </span>
-              <span className="text-black p-[12px] uppercase w-[40px] h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
+              <span className="text-black md:p-[12px] uppercase w-[20px] h-[20px] md:w-[40px] md:h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
                 l
               </span>
-              <span className="text-black p-[12px] uppercase w-[40px] h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
+              <span className="text-black md:p-[12px] uppercase w-[20px] h-[20px] md:w-[40px] md:h-[40px] bg-[#F5F4F4] flex items-center justify-center rounded-[9px] cursor-pointer">
                 xl
               </span>
             </div>
@@ -72,7 +72,7 @@ const CardProductLike = ({ id, pic, name, price, category }) => {
             <FaStar className="text-[#6A6A6D] text-[15px]" />
           </div>
         </div>
-        <span className=" leading-[31px] tracking-[0] text-[#909090] uppercase text-[18px] font-bold">
+        <span className=" md:leading-[31px] tracking-[0] text-[#909090] uppercase text-base md:text-[18px] font-bold">
           {price} EGP
         </span>
       </div>

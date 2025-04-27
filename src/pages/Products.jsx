@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import product1 from "../assets/shirtShop.png";
+import productFilterIcon from "../assets/Filter.png";
 import CardShop from "../components/cards/CardShop";
 import MainSection from "../components/Tabs/MainSection";
-import { TiArrowRightOutline } from "react-icons/ti";
 import { GrClose } from "react-icons/gr";
 
 const products = Array(8).fill({
@@ -34,12 +34,14 @@ const Products = () => {
       <MainSection breadcrumb={` CATEGORIES > MEN`} title={"MEN"} />{" "}
       <div className="px-5 relative overflow-hidden lg:px-16 xl:px-24 py-14 flex flex-col flex-wrap lg:flex-nowrap lg:flex-row gap-4 ">
         {!openSideBar && (
-          <TiArrowRightOutline
+          <img
             onClick={() => setOpenSideBar(true)}
-            size={30}
-            className="text-white bg-[#FF3200] rounded-full absolute top-5 left-0 cursor-pointer lg:hidden"
+            src={productFilterIcon}
+            alt="productFilterIcon"
+            className="h-7 w-7 rounded-full absolute top-5 left-0 cursor-pointer lg:hidden"
           />
         )}
+
         <div className="categories hidden lg:block w-full h-fit lg:w-1/4 bg-white z-10 p-2">
           <div className="flex items-center justify-between">
             <span className="text-[12px] w-full leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">
@@ -314,7 +316,7 @@ const Products = () => {
               Featured
             </span>
           </div>
-          <div className="cards w-full md:w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          <div className="cards w-full md:w-fit mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             <CardShop
               id={"1"}
               pic={product1}

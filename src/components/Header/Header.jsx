@@ -21,7 +21,11 @@ const Header = () => {
     <>
       <header className="w-full relative flex justify-between gap-5 items-center px-[30px] md:px-[56px] lg:px-[180px] p-1 md:py-[10px] bg-white">
         <Link to="/">
-          <img src={logo} className="md:w-[54px] w-8 h-10 md:h-[61px]" alt="logo" />
+          <img
+            src={logo}
+            className="md:w-[54px] w-8 h-10 md:h-[61px]"
+            alt="logo"
+          />
         </Link>
         <nav className="hidden md:block h-full">
           <ul className="flex h-full items-center flex-wrap gap-[10px] lg:gap-[30px]">
@@ -370,14 +374,14 @@ const Header = () => {
           } left-0 w-full bg-white z-50 duration-300`}
         >
           <nav className="block h-full my-5">
-            <ul className="flex h-full flex-col items-center flex-wrap gap-[30px]">
+            <ul className="flex h-full flex-col items-center flex-wrap gap-[10px]">
               <li>
                 <Link
                   onClick={() => {
                     setIsOpen(false);
                     setActive("/");
                   }}
-                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                  className={`text-[13px] leading-[20px] tracking-[0] uppercase ${
                     active === "/" ? "activeLink" : ""
                   }`}
                   to="/"
@@ -391,10 +395,10 @@ const Header = () => {
                     setIsOpen(false);
                     setActive("categories");
                   }}
-                  className={`text-[18px] ${
+                  className={`text-[13px] ${
                     active === "categories" ? "activeLink" : ""
                   } font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1`}
-                  to="/categories"
+                  to="/products"
                 >
                   categories
                   <img src={dropIcon} className="h-[8px]" alt="dropIcon" />
@@ -503,7 +507,7 @@ const Header = () => {
                     setIsOpen(false);
                     setActive("products");
                   }}
-                  className={`text-[18px] ${
+                  className={`text-[13px] ${
                     active === "products" ? "activeLink" : ""
                   } font-normal leading-[20px] tracking-[0] uppercase flex items-center gap-1`}
                 >
@@ -613,7 +617,7 @@ const Header = () => {
                     setIsOpen(false);
                     setActive("about-us");
                   }}
-                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                  className={`text-[13px] leading-[20px] tracking-[0] uppercase ${
                     active === "about-us" ? "activeLink" : ""
                   }`}
                   to="/about-us"
@@ -627,7 +631,7 @@ const Header = () => {
                     setIsOpen(false);
                     setActive("contact-us");
                   }}
-                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                  className={`text-[13px] leading-[20px] tracking-[0] uppercase ${
                     active === "contact-us" ? "activeLink" : ""
                   }`}
                   to="/contact-us"
@@ -641,7 +645,7 @@ const Header = () => {
                     setIsOpen(false);
                     setActive("blog");
                   }}
-                  className={`text-[18px] leading-[20px] tracking-[0] uppercase ${
+                  className={`text-[13px] leading-[20px] tracking-[0] uppercase ${
                     active === "blog" ? "activeLink" : ""
                   }`}
                   to="/blog"
@@ -672,13 +676,12 @@ const Header = () => {
                     <CiHeart className="w-[24px] h-[24px]" />
                   </Link>
                 </li>
-                
+
                 <li onClick={() => setIsOpen(false)} className="w-fit">
                   <Link to="/compare">
                     <img src={compare} alt="compareIcon" className="w-[24px]" />
                   </Link>
                 </li>
-              
               </ul>
             </div>
           </div>

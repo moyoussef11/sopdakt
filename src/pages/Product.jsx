@@ -109,7 +109,7 @@ const Product = () => {
         </span>
       </div>
       <div className="hero scale-95 overflow-hidden px-5 md:px-24 py-5 md:py-10 flex flex-col md:flex-row items-center gap-10">
-        <div className="w-full py-10 md:w-1/2 flex flex-col md:flex-row gap-4 items-center justify-center">
+        <div className="w-full py-10 md:w-1/2 flex flex-col-reverse md:flex-row gap-4 items-center justify-center">
           <div className="imgs md:flex flex items-center gap-5 flex-wrap justify-center md:flex-col md:gap-2 md:gap-5">
             <img
               src={pro1}

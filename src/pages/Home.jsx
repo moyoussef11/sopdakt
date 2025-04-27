@@ -23,6 +23,7 @@ const Home = () => {
     <>
       <main className="w-full">
         <Swiper
+          loop={true}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Pagination, Autoplay]}

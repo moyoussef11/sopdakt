@@ -6,18 +6,16 @@ import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-
-
 const CardShop = ({ id, pic, name, price, category }) => {
   return (
     <>
       {" "}
       <motion.div
-        initial={{ x: -250, opacity: 1 }}
+        initial={{ x: -110, opacity: 1 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.1, ease: "easeInOut" }}
         viewport={{ once: false, amount: 0.1 }}
-        className="card shadow-2xl  p-3 w-full  bg-white rounded-[12px] relative group duration-200"
+        className="card shadow-2xl p-2 sm:p-3 w-full  bg-white rounded-[12px] relative group duration-200"
       >
         <Link to={`/product/${id}`}>
           <img src={linkIcon} alt="linkIcon" className="ml-auto" />
@@ -25,7 +23,7 @@ const CardShop = ({ id, pic, name, price, category }) => {
         <div className="relative">
           <img
             src={pic}
-            className="w-full h-[392px] lg:h-[252px]  object-cover"
+            className="w-full h-[150px] sm:h-[392px] lg:h-[252px]  object-cover"
             loading="lazy"
             alt={name}
           />
@@ -34,11 +32,11 @@ const CardShop = ({ id, pic, name, price, category }) => {
           <span className="uppercase text-[#909090] text-sm hover:text-black">
             {category}
           </span>
-          <div className="flex items-center justify-between gap-2">
-            <h5 className="text-[15px] font-normal capitalize">
+          <div className="flex flex-wrap sm:flex-nowrap items-center justify-between sm:gap-2">
+            <h5 className="text-[12px] my-1 sm:text-[15px] font-normal capitalize">
               {name.length > 20 ? name.slice(0, 20) + "..." : name}
             </h5>
-            <span className=" leading-[31px] tracking-[0] text-[#909090] uppercase text-[15px] font-normal">
+            <span className=" sm:leading-[31px] tracking-[0] text-[#909090] uppercase text-[15px] font-normal">
               {price} EGP
             </span>
           </div>
@@ -59,7 +57,7 @@ const CardShop = ({ id, pic, name, price, category }) => {
             <span className="w-[40px] h-[40px]  rounded-full flex items-center justify-center cursor-pointer">
               <img src={comIcon} alt="comIcon" loading="lazy" />
             </span>
-            <button className=" font-bold w-full py-2 shadow-lg uppercase bg-white rounded-full flex items-center justify-center cursor-pointer">
+            <button className=" font-bold text-[12px] w-full sm:text-base w-full py-2 shadow-lg uppercase bg-white rounded-full flex items-center justify-center cursor-pointer">
               add to cart
             </button>
             <span className="w-[40px] h-[40px] rounded-full flex items-center justify-center cursor-pointer">
