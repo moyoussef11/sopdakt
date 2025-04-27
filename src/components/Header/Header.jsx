@@ -19,9 +19,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full relative flex justify-between gap-5 items-center px-[30px] md:px-[56px] lg:px-[180px] py-[10px] bg-white">
+      <header className="w-full relative flex justify-between gap-5 items-center px-[30px] md:px-[56px] lg:px-[180px] p-1 md:py-[10px] bg-white">
         <Link to="/">
-          <img src={logo} className="w-[54px] h-[61px]" alt="logo" />
+          <img src={logo} className="md:w-[54px] w-8 h-10 md:h-[61px]" alt="logo" />
         </Link>
         <nav className="hidden md:block h-full">
           <ul className="flex h-full items-center flex-wrap gap-[10px] lg:gap-[30px]">
@@ -366,7 +366,7 @@ const Header = () => {
 
         <div
           className={`md:hidden absolute ${
-            isOpen ? "top-[80px]" : "-top-[800px]"
+            isOpen ? "top-[45px]" : "-top-[800px]"
           } left-0 w-full bg-white z-50 duration-300`}
         >
           <nav className="block h-full my-5">

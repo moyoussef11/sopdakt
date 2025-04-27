@@ -19,11 +19,11 @@ const Blog = () => {
       <MainSection breadcrumb={`BLOG`} title={"BLOG"} />
       <section
         style={{ backgroundImage: `url(${heroImg})` }}
-        className="w-full h-[400px] md:h-screen  bg-center bg-cover bg-no-repeat relative flex items-center justify-center md:justify-start px-5 md:px-16 lg:px-32"
+        className="w-full h-[200px] md:h-screen  bg-center bg-cover bg-no-repeat relative flex items-center justify-center md:justify-start px-5 md:px-16 lg:px-32"
       >
         <div className="bg-[#FF5B5B30] w-full h-full absolute left-0"></div>
 
-        <h4 className="text-3xl sm:text-[70px] relative font-bold text-white text-center leading-[65px] md:leading-[84px] tracking-[0.2px] uppercase">
+        <h4 className="text-3xl md:text-[70px] relative font-bold text-white text-center md:leading-[65px] md:leading-[84px] tracking-[0.2px] uppercase">
           We believe <br /> we can all make <br /> a difference.
         </h4>
       </section>

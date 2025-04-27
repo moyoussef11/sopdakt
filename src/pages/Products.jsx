@@ -3,6 +3,8 @@ import { IoIosArrowUp } from "react-icons/io";
 import product1 from "../assets/shirtShop.png";
 import CardShop from "../components/cards/CardShop";
 import MainSection from "../components/Tabs/MainSection";
+import { TiArrowRightOutline } from "react-icons/ti";
+import { GrClose } from "react-icons/gr";
 
 const products = Array(8).fill({
   name: "The Cloud Relaxed Cardigan",
@@ -23,17 +25,33 @@ const Products = () => {
   }, []);
   const [selectedWaist, setSelectedWaist] = useState(null);
   const [selectedClothing, setSelectedClothing] = useState(null);
+  const [openSideBar, setOpenSideBar] = useState(false);
 
   const waistSizes = [35, 36, 37, 38, 39];
   const clothingSizes = filters.size;
   return (
     <>
       <MainSection breadcrumb={` CATEGORIES > MEN`} title={"MEN"} />{" "}
-      <div className="px-5 lg:px-16 xl:px-24 py-14 flex flex-col flex-wrap lg:flex-nowrap lg:flex-row gap-4 ">
-        <div className="w-full lg:w-1/4 bg-white z-10 p-2">
-          <span className="text-[12px] leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">
-            249 Products
-          </span>
+      <div className="px-5 relative overflow-hidden lg:px-16 xl:px-24 py-14 flex flex-col flex-wrap lg:flex-nowrap lg:flex-row gap-4 ">
+        {!openSideBar && (
+          <TiArrowRightOutline
+            onClick={() => setOpenSideBar(true)}
+            size={30}
+            className="text-white bg-[#FF3200] rounded-full absolute top-5 left-0 cursor-pointer lg:hidden"
+          />
+        )}
+        <div className="categories hidden lg:block w-full h-fit lg:w-1/4 bg-white z-10 p-2">
+          <div className="flex items-center justify-between">
+            <span className="text-[12px] w-full leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">
+              249 Products
+            </span>
+            <GrClose
+              onClick={() => setOpenSideBar(false)}
+              size={20}
+              className="text-[#FF3200] cursor-pointer md:hidden"
+            />
+          </div>
+
           <div className="flex justify-between md:flex-col flex-wrap gap-4 mt-5">
             <div className="bg-white border-b-2 py-5 border-[#DDDBDC] rounded-lg mt-4">
               <div className="flex justify-between items-center mb-3">
@@ -42,14 +60,14 @@ const Products = () => {
                 </h2>
                 <IoIosArrowUp className="cursor-pointer" />
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex flex-wrap gap-5 md:gap-1">
                 <li className="flex items-center">
                   <input type="checkbox" className="custom-checkbox" />
                   <span className="ml-2 text-sm text-gray-700 custom-font">
                     Everyone - ALL Gender Collection
                   </span>
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center ">
                   <input type="checkbox" className="custom-checkbox" />
                   <span className="ml-2 text-sm text-gray-700 custom-font">
                     Accessories & Gift Cards
@@ -88,7 +106,7 @@ const Products = () => {
                 </h2>
                 <IoIosArrowUp className="cursor-pointer" />
               </div>
-              <ul className="grid grid-cols-3 gap-2">
+              <ul className="flex flex-wrap md:grid grid-cols-3 gap-2">
                 {filters.color.map((color) => (
                   <li
                     key={color}
@@ -113,7 +131,7 @@ const Products = () => {
               {/* قسم Waist */}
               <div className="mb-4 ">
                 <h2 className="text-lg font-semibold mb-2">Waist</h2>
-                <div className="flex space-x-2">
+                <div className="flex flex-wrap gap-2 space-x-2">
                   {waistSizes.map((size) => (
                     <button
                       key={size}
@@ -133,7 +151,141 @@ const Products = () => {
               {/* قسم Clothing */}
               <div>
                 <h2 className="text-lg font-semibold mb-2">CLOTHING</h2>
-                <div className="flex space-x-2">
+                <div className="flex flex-wrap gap-2 space-x-2">
+                  {clothingSizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedClothing(size)}
+                      className={`w-12 h-12 flex items-center justify-center border rounded-md text-sm ${
+                        selectedClothing === size
+                          ? "bg-gray-200 border-gray-400"
+                          : "bg-white border-gray-300"
+                      } hover:bg-gray-100 transition-colors`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`categories absolute left-0 duration-300  ${
+            openSideBar ? "ml-0" : "-ml-[2000px]"
+          } lg:hidden w-full h-fit lg:w-1/4 bg-white z-200 p-2`}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-[12px] w-full leading-[16px] tracking-[0.2px] capitalize font-normal border-b-[1px] border-[#DDDBDC] block py-3">
+              249 Products
+            </span>
+            <GrClose
+              onClick={() => setOpenSideBar(false)}
+              size={20}
+              className="text-[#FF3200] cursor-pointer md:hidden"
+            />
+          </div>
+
+          <div className="flex justify-between md:flex-col flex-wrap gap-4 mt-5">
+            <div className="bg-white border-b-2 py-5 border-[#DDDBDC] rounded-lg mt-4">
+              <div className="flex justify-between items-center mb-3">
+                <h2 className="text-base font-semibold text-gray-800 custom-font">
+                  Category
+                </h2>
+                <IoIosArrowUp className="cursor-pointer" />
+              </div>
+              <ul className="space-y-3 flex flex-wrap gap-5 md:gap-1">
+                <li className="flex items-center">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span className="ml-2 text-sm text-gray-700 custom-font">
+                    Everyone - ALL Gender Collection
+                  </span>
+                </li>
+                <li className="flex items-center ">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span className="ml-2 text-sm text-gray-700 custom-font">
+                    Accessories & Gift Cards
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span className="ml-2 text-sm text-gray-700 custom-font">
+                    Backpacks, Weekenders & Duffle Bags
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span className="ml-2 text-sm text-gray-700 custom-font">
+                    Dress Shirts & Button Downs
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span className="ml-2 text-sm text-gray-700 custom-font">
+                    Hoodies & Sweatshirts
+                  </span>
+                </li>
+              </ul>
+              <a
+                href="#"
+                className="block mt-3 text-sm text-[#4C4C4B] w-fit custom-font hover:underline"
+              >
+                View More +
+              </a>
+            </div>
+            <div className="bg-white border-b-2 py-5 border-[#DDDBDC] rounded-lg mt-4">
+              <div className="flex justify-between items-center mb-3">
+                <h2 className="text-base font-semibold text-gray-800 custom-font capitalize">
+                  colors
+                </h2>
+                <IoIosArrowUp className="cursor-pointer" />
+              </div>
+              <ul className="flex flex-wrap md:grid grid-cols-3 gap-2">
+                {filters.color.map((color) => (
+                  <li
+                    key={color}
+                    className="flex items-center flex-col justify-center"
+                  >
+                    <span
+                      className="h-[24px] w-[24px] flex items-center justify-center rounded-full cursor-pointer"
+                      style={{ backgroundColor: `${color}` }}
+                    ></span>
+                    <span>{color}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#"
+                className="block mt-3 text-sm text-[#4C4C4B] w-fit custom-font hover:underline"
+              >
+                View More +
+              </a>
+            </div>
+            <div className="p-4">
+              {/* قسم Waist */}
+              <div className="mb-4 ">
+                <h2 className="text-lg font-semibold mb-2">Waist</h2>
+                <div className="flex flex-wrap gap-2 space-x-2">
+                  {waistSizes.map((size) => (
+                    <button
+                      key={size}
+                      onClick={() => setSelectedWaist(size)}
+                      className={`w-12 h-12 flex items-center justify-center border rounded-md text-sm ${
+                        selectedWaist === size
+                          ? "bg-gray-200 border-gray-400"
+                          : "bg-white border-gray-300"
+                      } hover:bg-gray-100 transition-colors`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* قسم Clothing */}
+              <div>
+                <h2 className="text-lg font-semibold mb-2">CLOTHING</h2>
+                <div className="flex flex-wrap gap-2 space-x-2">
                   {clothingSizes.map((size) => (
                     <button
                       key={size}
@@ -164,73 +316,73 @@ const Products = () => {
           </div>
           <div className="cards w-full md:w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}
             />
             <CardShop
-              path={"/"}
+              id={"1"}
               pic={product1}
               name={"Hyperadapt Shield Lite"}
               price={200}

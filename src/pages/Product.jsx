@@ -14,6 +14,7 @@ import CardProductLike from "../components/cards/CardProductLike";
 import SizeChart from "../components/Tabs/Size";
 import { motion, useInView } from "framer-motion";
 import SizeRecommendation from "../components/Tabs/SizeRecommendation";
+import { useParams } from "react-router-dom";
 
 const faqs = [
   {
@@ -84,13 +85,14 @@ const faqs = [
 ];
 
 const Product = () => {
+  const { id } = useParams();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [id]);
   const [mainImage, setMainImage] = useState(pro1);
   const [openSize, setOpenSize] = useState(false);
   const [openSizeRec, setOpenSizeRec] = useState(false);
-  console.log(openSizeRec);
 
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
@@ -106,7 +108,7 @@ const Product = () => {
           <span className="font-medium text-black">jackets&coats</span>{" "}
         </span>
       </div>
-      <div className="hero overflow-hidden px-5 md:px-24 py-5 md:py-10 flex flex-col md:flex-row items-center gap-10">
+      <div className="hero scale-95 overflow-hidden px-5 md:px-24 py-5 md:py-10 flex flex-col md:flex-row items-center gap-10">
         <div className="w-full py-10 md:w-1/2 flex flex-col md:flex-row gap-4 items-center justify-center">
           <div className="imgs md:flex flex items-center gap-5 flex-wrap justify-center md:flex-col md:gap-2 md:gap-5">
             <img
@@ -166,7 +168,7 @@ const Product = () => {
             <h4 className="font-bold text-[20px] md:text-[45px] md:leading-[33.24px] uppercase tracking-[0] ">
               Oversized Shirt Jacket
             </h4>
-            <div className="flex items-center justify-between flex-wrap gap-2 my-5">
+            <div className="flex items-center justify-between flex-wrap gap-2 md:my-5">
               <div className="stars flex items-center flex-wrap gap-1 my-5">
                 <FaStar className="text-[#FFA500] text-[25px]" />
                 <FaStar className="text-[#FFA500] text-[25px]" />
@@ -178,11 +180,11 @@ const Product = () => {
                 ADD TO COMPARE
               </p>
             </div>
-            <span className="text-[51px] font-bold leading-[33.24px] text-[#FF3200] tracking-[0]">
+            <span className="text-3xl md:text-[51px] font-bold leading-[33.24px] text-[#FF3200] tracking-[0]">
               260EGP
             </span>
           </div>
-          <div className="colors border-b-2 border-[#D9D9D9] pb-5">
+          <div className="colors border-b-2 border-[#D9D9D9] md:pb-5">
             <h5 className="text-[18px] leading-[33.24px] text-[#D9D9D9] tracking-[0] my-3">
               SELECT COLOR
             </h5>
@@ -191,7 +193,7 @@ const Product = () => {
               <span className="w-[40px] h-[40px] bg-[#574632] rounded-full cursor-pointer border-2 border-transparent p-3 hover:border-[#FF3200]"></span>
             </div>
           </div>
-          <div className="sizes border-b-2 border-[#D9D9D9] pb-5">
+          <div className="sizes border-b-2 border-[#D9D9D9] md:pb-5">
             <h5 className="text-[18px] leading-[33.24px] text-[#D9D9D9] tracking-[0] my-3">
               CHOOSE SIZE{" "}
             </h5>
@@ -258,7 +260,7 @@ const Product = () => {
         <h4 className="font-bold uppercase text-[34.8px] sm:leading-[24px] tracking-[3.36px] text-center">
           special bundle offers{" "}
         </h4>
-        <div className="cards my-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:px-24">
+        <div className="cards lg:scale-90 my-14 grid grid-cols-2 lg:grid-cols-3 gap-5 px-5 md:px-24">
           <CardOffer
             title={"EID OFFER!"}
             desc={"GET THIS BUNDLE NOW"}
@@ -303,30 +305,33 @@ const Product = () => {
         <h4 className="font-bold uppercase text-[34.8px] md:leading-[24px] tracking-[3.36px] text-center">
           YOU MIGHT ALSO LIKE{" "}
         </h4>
-        <div className="cards py-10 px-5 flex items-center justify-center gap-5 md:gap-10 flex-wrap">
+        <div
+          className="cards py-10 px-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 md:gap-10 "
+          // className="cards py-10 px-5 flex items-center justify-center gap-5 md:gap-10 flex-wrap"
+        >
           <CardProductLike
-            path={"/"}
+            id={"1"}
             pic={product1}
             name={"Hyperadapt Shield Lite"}
             price={200}
             category={"category"}
           />
           <CardProductLike
-            path={"/"}
+            id={"2"}
             pic={product1}
             name={"Hyperadapt Shield Lite"}
             price={200}
             category={"category"}
           />
           <CardProductLike
-            path={"/"}
+            id={"3"}
             pic={product1}
             name={"Hyperadapt Shield Lite"}
             price={200}
             category={"category"}
           />
           <CardProductLike
-            path={"/"}
+            id={"4"}
             pic={product1}
             name={"Hyperadapt Shield Lite"}
             price={200}

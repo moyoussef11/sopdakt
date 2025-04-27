@@ -107,14 +107,14 @@ const Home = () => {
           BEST SELLER
         </h4>
         <div className="cards md:mt-20 my-10">
-          <div className="relative w-full h-[450px]">
+          <div className="relative w-full h-[350px] md:h-[450px]">
             <Swiper
               slidesPerView={5}
               spaceBetween={20}
               pagination={{ clickable: true }}
               breakpoints={{
                 0: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                   spaceBetween: 20,
                 },
                 768: {
@@ -199,7 +199,7 @@ const Home = () => {
       <section
         id="flash"
         style={{ backgroundImage: `url(${flash})` }}
-        className="bg-blue-400 relative w-full h-[599px] bg-center bg-cover bg-no-repeat flex items-center justify-center"
+        className="relative w-full h-[300px] md:h-[599px] bg-center bg-cover bg-no-repeat flex items-center justify-center"
       >
         <div className=" absolute left-0  w-full h-full bg-black opacity-65"></div>
         <div className="relative z-10 flex flex-col items-center justify-center gap-5 md:gap-12 text-white text-center">

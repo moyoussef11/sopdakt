@@ -23,7 +23,7 @@ const AboutUs = () => {
       <MainSection breadcrumb={`ABOUT US`} title={"ABOUT US"} />
 
       <main
-        className="w-full h-[400px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
+        className="w-full h-[200px] md:h-[400px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
         style={{
           backgroundImage: `url(${herpAbout})`,
         }}

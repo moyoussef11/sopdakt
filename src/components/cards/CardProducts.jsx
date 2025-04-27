@@ -18,7 +18,7 @@ const CardProducts = ({ id, pic, name, price, category }) => {
       initial={{ x: -300, opacity: 0 }}
       animate={isInView ? { x: 0, opacity: 1 } : { x: 0, opacity: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="card p-3 w-full md:w-[263px] bg-white rounded-[9px] relative group duration-200"
+      className="card p-1 md:p-3 w-full md:w-[263px] bg-white rounded-[9px] relative group duration-200"
     >
       <Link to={`/product/${id}`}>
         <img src={linkIcon} alt="linkIcon" className="ml-auto" />
@@ -26,7 +26,7 @@ const CardProducts = ({ id, pic, name, price, category }) => {
       <div className="relative">
         <img
           src={pic}
-          className="w-full object-contain md:w-[219px] h-[219px]"
+          className="w-full object-contain h-[100px] md:w-[219px] md:h-[219px]"
           loading="lazy"
           alt={name}
         />
@@ -60,7 +60,7 @@ const CardProducts = ({ id, pic, name, price, category }) => {
           {category}
         </span>
         <div className="flex items-center flex-wrap justify-center sm:justify-between gap-2">
-          <h5 className="text-[15px] text-black font-normal capitalize">
+          <h5 className="text-sm md:text-[15px] text-black font-normal capitalize">
             {name.length > 20 ? name.slice(0, 20) + "..." : name}
           </h5>
           <span className="leading-[31px] tracking-[0] text-[#909090] uppercase text-[15px] font-normal">
@@ -72,7 +72,7 @@ const CardProducts = ({ id, pic, name, price, category }) => {
         <p className="text-[12px] leading-[16px] tracking-[0.2px] text-[#737373] capitalize">
           black
         </p>
-        <div className="flex items-center gap-1 mt-1">
+        <div className="flex items-center justify-center md:justify-start gap-1 mt-1">
           <span className="w-[20px] h-[20px] bg-[#000000] rounded-full cursor-pointer"></span>
           <span className="w-[20px] h-[20px] bg-[#FF3200] rounded-full cursor-pointer"></span>
           <span className="w-[20px] h-[20px] bg-[#D9D9D9] rounded-full cursor-pointer"></span>

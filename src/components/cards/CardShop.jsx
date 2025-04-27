@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 
 
-const CardShop = ({ path, pic, name, price, category }) => {
+const CardShop = ({ id, pic, name, price, category }) => {
   return (
     <>
       {" "}
@@ -19,7 +19,7 @@ const CardShop = ({ path, pic, name, price, category }) => {
         viewport={{ once: false, amount: 0.1 }}
         className="card shadow-2xl  p-3 w-full  bg-white rounded-[12px] relative group duration-200"
       >
-        <Link to={path}>
+        <Link to={`/product/${id}`}>
           <img src={linkIcon} alt="linkIcon" className="ml-auto" />
         </Link>
         <div className="relative">

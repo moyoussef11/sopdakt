@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 
-const CardProductLike = ({ path, pic, name, price, category }) => {
+const CardProductLike = ({ id, pic, name, price, category }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: false,
@@ -14,18 +14,18 @@ const CardProductLike = ({ path, pic, name, price, category }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ x: -200, opacity: 0 }}
-      animate={isInView ? { x: 0, opacity: 1 } : { x: -200, opacity: 1 }}
-      transition={{ duration: 0.1, ease: "easeOut" }}
+      initial={{ x: 100, opacity: 0 }}
+      animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
       className="card p-3 w-full md:w-[263px] bg-white rounded-[9px] relative group duration-200"
     >
-      <Link to={path}>
+      <Link to={`/product/${id}`}>
         <img src={linkIcon} alt="linkIcon" className="ml-auto" />
       </Link>
       <div className="relative">
         <img
           src={pic}
-          className="w-full object-contain md:w-[219px] h-[219px]"
+          className="w-full object-contain h-[100px] sm:h-[200px] md:h-[219px]"
           loading="lazy"
           alt={name}
         />
@@ -59,7 +59,7 @@ const CardProductLike = ({ path, pic, name, price, category }) => {
           {category}
         </span>
         <div className="flex items-center justify-between gap-2">
-          <h5 className="text-[15px] font-normal capitalize">
+          <h5 className="text-[12px] sm:text-[15px] font-normal capitalize">
             {name.length > 20 ? name.slice(0, 20) + "..." : name}
           </h5>
         </div>
