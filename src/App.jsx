@@ -23,6 +23,7 @@ import Signup from "./pages/Signup.jsx";
 import BlogDetails from "./pages/BlogDetails.jsx";
 import Login from "./pages/Login.jsx";
 import Subscribers from "./components/Tabs/Subscribers.jsx";
+import Spin from "./components/Tabs/Spin.jsx";
 
 function App() {
   const pathName = useLocation().pathname;
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       <Subscribers />
+      <Spin />
       {!isHidden && <TopBar />}
       <Header />{" "}
       <Routes>

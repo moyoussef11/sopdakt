@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import visaPic from "../assets/payment.png";
 import arrowPic from "../assets/ar.png";
-import { Modal, Input, Typography } from "antd";
+import { Modal, Input } from "antd";
 import { Link } from "react-router-dom";
 import MainSection from "../components/Tabs/MainSection";
 

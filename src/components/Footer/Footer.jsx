@@ -157,7 +157,13 @@ const Footer = () => {
               <span>© 2025 pd. All Rights Reserved.</span>
               <span>
                 Devolped with ♡ by{" "}
-                <span className="underline cursor-pointer">piky host</span>
+                <a
+                  href="https://www.pikyhost.com/"
+                  target="_blank"
+                  className="underline cursor-pointer"
+                >
+                  piky host
+                </a>
               </span>
             </div>
             <span>
