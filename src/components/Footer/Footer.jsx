@@ -43,10 +43,10 @@ const Footer = () => {
           />
         </div>
         <div className="w-full flex flex-col">
-          <div className="flex items-center w-full gap-5 justify-between">
+          <div className="flex items-center px-10 w-full gap-5 justify-between">
             <img src={logo} alt="logo" className="h-24 m-3 md:hidden" />
             <ul
-              className=" flex my-2 mx-1 w-full gap-2 flex-row  justify-center items-center md:flex-row md:justify-start flex-wrap md:gap-5"
+              className=" flex my-2 flex-col justify-center items-center md:flex-row md:justify-start flex-wrap md:gap-5"
               // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
             >
               <li>
