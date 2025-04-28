@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button, Modal } from "antd";
-import subscriberImg from "../../assets/subscribers.png";
+import { Modal } from "antd";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-
 import { motion } from "framer-motion";
+
 
 const sectors = [
   "ساعة",
@@ -34,16 +33,14 @@ const Spin = () => {
   const [spinning, setSpinning] = useState(false);
   const [prize, setPrize] = useState(null);
 
-    
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-          setIsModalOpen(true);
-        }, 8000);
-    
-        return () => clearTimeout(timeout);
-      }, []);
-    
-    
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 8000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const spin = () => {
     if (spinning) return;
     setSpinning(true);
@@ -95,7 +92,7 @@ const Spin = () => {
       className="!p-0 !py-0 m-0"
       centered
     >
-      <div className="bg-white rounded-lg  w-full md:h-[400px] max-w-3xl flex flex-col md:flex-row items-center justify-center relative">
+      <div className="bg-white rounded-lg w-full md:h-[400px] max-w-3xl flex flex-col md:flex-row items-center justify-center relative">
         {/* Left Side - Image */}
         <div className="h-full  md:-ml-[180px]">
           {/* <WheelSpinner /> */}
@@ -117,7 +114,7 @@ const Spin = () => {
                 {sectors.map((sector, index) => {
                   const anglePerSector = 360 / sectors.length;
                   const rotationForText =
-                    index * anglePerSector + anglePerSector / 2; // لنجعل النص في وسط القطاع
+                    index * anglePerSector + anglePerSector / 2;
 
                   return (
                     <g key={index}>
@@ -129,10 +126,10 @@ const Spin = () => {
                       />
                       <text
                         x={radius}
-                        y={radius / 1.5} // تقريب النص أكتر لمنتصف القطاع
+                        y={radius / 3}
                         textAnchor="middle"
                         fill={index % 2 === 0 ? "#000000" : "#ffffff"}
-                        fontSize="12"
+                        fontSize="14"
                         fontWeight="bold"
                         transform={`rotate(${rotationForText}, ${radius}, ${radius})`}
                       >
@@ -151,27 +148,27 @@ const Spin = () => {
                 <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[20px] border-b-[#FF3200]"></div>
               </div>
             </div>
-
             {/* Congratulations Message */}
             {prize && (
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="mt-6 p-4 bg-green-500 text-white font-bold rounded-xl shadow-lg"
+                className="mt-6 p-3 md:absolute left-0 bottom-0 md:w-full flex items-center justify-center bg-green-500 text-white font-bold rounded-xl shadow-lg"
               >
                 🎉 مبروك! كسبت: {prize} 🎉
               </motion.div>
             )}
+           
           </div>
         </div>
 
         {/* Right Side - Content */}
         <div className="p-2 md:p-8 flex flex-col justify-center mx-auto relative">
-          <h2 className=" md:text-4xl text-center font-bold text-[#FF3200] mb-2">
+          <h2 className=" md:text-[34px] text-center font-bold uppercase text-[#FF3200] mb-2">
             Enjoy Extra Discounts{" "}
           </h2>
-          <p className="text-base  uppercase  text-center md:text-3xl md:mb-6 font-bold">
+          <p className="text-base  uppercase  text-center md:text-[40px] md:leading-[140%] md:mb-6 font-bold">
             Spin and Win <br /> On Selected Items{" "}
           </p>
 
