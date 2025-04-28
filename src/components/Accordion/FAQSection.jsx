@@ -33,7 +33,7 @@ const FAQSection = ({ faqs }) => {
                 onClick={() => toggle(index)}
                 className="w-full flex justify-between items-center px-6 py-4 text-left"
               >
-                <span className="font-semibold text-[10px] sm:text-base text-black">
+                <span className="font-semibold text-[9px] sm:text-[10px] sm:text-base text-black">
                   {faq.question}
                 </span>
                 {isOpen ? (

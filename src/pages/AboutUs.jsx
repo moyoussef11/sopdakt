@@ -23,29 +23,29 @@ const AboutUs = () => {
       <MainSection breadcrumb={`ABOUT US`} title={"ABOUT US"} />
 
       <main
-        className="w-full h-[200px] md:h-[400px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
+        className="w-full h-[150px] sm:h-[200px] md:h-[400px] relative bg-center bg-no-repeat bg-cover flex items-center justify-center"
         style={{
           backgroundImage: `url(${herpAbout})`,
         }}
       >
         <div className="h-full w-full absolute bg-[#FF32006B]"></div>
-        <h4 className="text-3xl sm:text-[50px] relative font-bold text-white text-center md:leading-[54px] md:tracking-[0.2px] uppercase">
+        <h4 className="text-2xl sm:text-[50px] relative font-bold text-white text-center md:leading-[54px] md:tracking-[0.2px] uppercase">
           We believe <br /> we can all make <br /> a difference.
         </h4>
       </main>
       <section id="our-story" className="py-1 px-5 md:px-24">
         <div className="max-w-[1100px] scale-90 mx-auto">
-          <h4 className="text-[54px] mb-5 leading-[64px] md:tracking-[49px] text-[#FF3200] text-center font-bold uppercase">
+          <h4 className="text-[30px] sm:text-[54px] md:mb-5 md:leading-[64px] md:tracking-[49px] text-[#FF3200] text-center font-bold uppercase">
             Our Story
           </h4>
-          <p className="py-3 text-[26px] leading-[36px] tracking-[0] font-normal text-center md:text-left">
+          <p className="py-2 sm:py-3 sm:text-[26px] sm:leading-[36px] tracking-[0] font-normal text-center md:text-left">
             Launced in 2015, Exclusive is South Asia’s premier online shopping
             makterplace with an active presense in Bangladesh. Supported by wide
             range of tailored marketing, data and service solutions, Exclusive
             has 10,500 sallers and 300 brands and serves 3 millioons customers
             across the region.{" "}
           </p>
-          <p className="py-3 text-[26px] leading-[36px] tracking-[0] font-normal text-center md:text-left">
+          <p className="py-2 sm:py-3 text-[18px] sm:text-[26px] leading-[36px] tracking-[0] font-normal text-center md:text-left">
             Exclusive has more than 1 Million products to offer, growing at a
             very fast. Exclusive offers a diverse assotment in categories
             ranging from consumer.
@@ -53,13 +53,13 @@ const AboutUs = () => {
         </div>
       </section>
       <section id="vision" className="py-1 px-5 md:px-8 lg:px-24">
-        <div className="flex scale-90 gap-8 flex-col flex-wrap md:flex-row lg:flex-nowrap">
+        <div className="flex md:scale-90 gap-8 flex-col flex-wrap md:flex-row lg:flex-nowrap">
           <div className="max-w-[1100px] mx-auto flex flex-col gap-10">
             <div className="w-full bg-white rounded-[11px] shadow-2xl p-6">
               <h5 className="uppercase text-3xl md:text-[54px] md:leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
                 VISION
               </h5>
-              <p className="font-normal text-[#282D3B] uppercase text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
+              <p className="font-normal text-[#282D3B] uppercase sm:text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
                 Lorem Ipsum is simply dummy text of the printingand typesetting
                 industry. has been the industry’ standard dummy
               </p>
@@ -68,7 +68,7 @@ const AboutUs = () => {
               <h5 className="uppercase text-3xl md:text-[54px] md:leading-[64px] md:tracking-[50px] font-bold  text-center md:text-left mb-7">
                 MISION
               </h5>
-              <p className="font-normal text-[#282D3B] uppercase text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
+              <p className="font-normal text-[#282D3B] uppercase sm:text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
                 Lorem Ipsum is simply dummy text of the printingand typesetting
                 industry. has been the industry’ standard dummy
               </p>
@@ -76,10 +76,10 @@ const AboutUs = () => {
           </div>
           <div className="w-full lg:w-1/4">
             <div className="w-full bg-black text-white rounded-[11px] shadow-2xl p-6">
-              <h5 className="uppercase text-3xl md:text-[54px] text-[54px] md:leading-[64px] tracking-[13px] font-bold  text-center md:text-left mb-7">
+              <h5 className="uppercase text-3xl md:text-[30px] md:scale-75 lg:text-[54px] md:leading-[64px] tracking-[13px] font-bold  text-center md:text-left mb-7">
                 VALUES
               </h5>
-              <p className="font-normal uppercase text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
+              <p className="font-normal uppercase sm:text-2xl md:text-[28px] md:leading-[39px] tracking-[0] text-center md:text-left">
                 Lorem Ipsum is simply dummy text of the printingand typesetting
                 industry. has been the industry’ standard dummy
               </p>
@@ -87,7 +87,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section id="founder" className="py-28 px-5 md:px-24 overflow-hidden">
+      <section id="founder" className="py-10 md:py-28 px-5 md:px-24 overflow-hidden">
         <div
           className="services max-w-[1100px] scale-125 sm:scale-none w-fit mx-auto grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4 "
           // className="services max-w-[1100px] mx-auto grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
@@ -121,7 +121,7 @@ const AboutUs = () => {
           />
         </div>
 
-        <div className="flex overflow-hidden flex-col items-center justify-center my-10 bg-white p-4">
+        <div className="flex overflow-hidden flex-col items-center justify-center mt-10 md:my-10 bg-white p-2 md:p-4">
           <motion.div
             ref={ref}
             initial={{ x: 15000, opacity: 0 }}
@@ -137,7 +137,7 @@ const AboutUs = () => {
             </div>
 
             {/* Main content */}
-            <div className="p-6">
+            <div className="md:p-6">
               <img
                 src={founder}
                 alt="Founder"

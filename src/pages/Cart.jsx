@@ -10,7 +10,7 @@ const Cart = () => {
     <>
       {" "}
       <MainSection breadcrumb={` cart`} title={"cart"} />
-      <section className="py-16 px-5 md:px-10 lg:px-24">
+      <section className="sm:py-16 px-5 md:px-10 lg:px-24">
         <div className="bg-white p-6 flex flex-col md:flex-row gap-6">
           {/* Left Section - Products */}
           <div className="w-full md:w-2/3">

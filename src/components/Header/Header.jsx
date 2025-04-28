@@ -23,7 +23,7 @@ const Header = () => {
         <Link to="/">
           <img
             src={logo}
-            className="md:w-[54px] w-8 h-10 md:h-[61px]"
+            className="md:w-[54px] w-7 h-7 md:h-[61px]"
             alt="logo"
           />
         </Link>
@@ -370,7 +370,7 @@ const Header = () => {
 
         <div
           className={`md:hidden absolute ${
-            isOpen ? "top-[45px]" : "-top-[800px]"
+            isOpen ? "top-[36px]" : "-top-[800px]"
           } left-0 w-full bg-white z-50 duration-300`}
         >
           <nav className="block h-full my-5">
@@ -691,28 +691,28 @@ const Header = () => {
           <ul className="flex md:hidden flex-wrap shrink-0 items-center gap-[10px]">
             <li>
               <Link to="/">
-                <IoIosSearch className="w-[24px] h-[24px]" />
+                <IoIosSearch className="w-[20px] h-[20px]" />
               </Link>
             </li>
 
             <li className="w-fit">
               <Link to="/cart" className="relative">
-                <span className="absolute -right-1 bg-[#FF5B5B] w-[16px] h-[16px] rounded-[8px] text-center text-[11px]">
+                <span className="absolute -right-1 bg-[#FF5B5B] w-[10px] h-[12px] md:w-[16px] md:h-[16px] rounded-[8px] text-center text-[11px]">
                   0
                 </span>
-                <img src={cart} alt="userIcon" className="w-[24px]" />
+                <img src={cart} alt="userIcon" className="w-[15px] md:w-[24px]" />
               </Link>
             </li>
           </ul>
           <div className="md:hidden cursor-pointer z-20">
             {isOpen ? (
               <IoMdClose
-                className="w-[30px] h-[30px] cursor-pointer text-[#FF3200]"
+                className="w-[15px] h-[15px] md:w-[30px]  md:h-[30px] cursor-pointer text-[#FF3200]"
                 onClick={() => setIsOpen(!isOpen)}
               />
             ) : (
               <CiMenuBurger
-                className="w-[30px] h-[30px] cursor-pointer text-[#FF3200]"
+                className="w-[15px] h-[15px] md:w-[30px]  md:h-[30px] cursor-pointer text-[#FF3200]"
                 onClick={() => setIsOpen(!isOpen)}
               />
             )}

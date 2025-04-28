@@ -1,6 +1,6 @@
 const MainSection = ({ breadcrumb, title }) => {
   return (
-    <main className="py-5 bg-black text-white flex flex-col items-center justify-center">
+    <main className="sm:py-5 bg-black text-white flex flex-col items-center justify-center">
       <span className="uppercase leading-[75.2px] text-center">
         {" "}
         <span className="text-gray-400">home</span> &gt;{breadcrumb}

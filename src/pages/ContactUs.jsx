@@ -13,10 +13,10 @@ const ContactUs = () => {
     <>
       {" "}
       <MainSection breadcrumb={` contact us`} title={"contact us"} />
-      <div className="py-1 scale-90 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
-        <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-[12px] p-10 flex flex-col gap-5">
+      <div className="py-1 md:scale-90 flex flex-col md:flex-row gap-5 md:gap-20 px-5 md:px-28">
+        <div className="w-full md:w-1/2 bg-[#F5F5F5] rounded-[12px] p-5 md:p-10 flex flex-col gap-5">
           <div className="flex gap-2 items-center">
-            <img src={phoneIcon} alt="phoneIcon" loading="lazy" />
+            <img src={phoneIcon} alt="phoneIcon" className="h-[45px] md:h-full" loading="lazy" />
             <p className="uppercase text-[20px] leading-[24px] tracking-[24%]">
               Call To Us
             </p>
@@ -27,7 +27,7 @@ const ContactUs = () => {
           </div>
           <hr className="w-1/2 my-5" />
           <div className="flex gap-2 items-center">
-            <img src={mailIcon} alt="mailIcon" loading="lazy" />
+            <img src={mailIcon} alt="mailIcon" className="h-[45px] md:h-full" loading="lazy" />
             <p className="uppercase text-[20px] leading-[24px] tracking-[24%]">
               Write To US{" "}
             </p>
@@ -62,7 +62,7 @@ const ContactUs = () => {
               rows={15}
               className="bg-[#F5F5F5] rounded-[4px] p-3 w-full"
             ></textarea>
-            <div className="flex items-center justify-end gap-2 my-5">
+            <div className="flex items-center justify-end gap-2 md:my-5">
               <button className="bg-[#FF3200] text-white text-[16.8px] w-full md:w-[162px] cursor-pointer hover:bg-white hover:text-black duration-300 font-bold leading-[20px] tracking-[0] uppercase py-2 px-4 rounded-[12px]">
                 send
               </button>
@@ -70,11 +70,11 @@ const ContactUs = () => {
           </form>
         </div>
       </div>
-      <div className="py-1 scale-90 flex flex-col items-center justify-center">
-        <h4 className="font-bold uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
+:      <div className="py-4 md:scale-90 flex flex-col items-center justify-center">
+        <h4 className="font-bold md:my-4 uppercase text-[34.8px] leading-[24px] tracking-[3.36px] text-center">
           follow us
         </h4>{" "}
-        <ul className="py-10 flex gap-5 items-center justify-center flex-wrap">
+        <ul className="my-4 flex gap-5 items-center justify-center flex-wrap">
           <li>
             <a href="" target="_blank">
               <img

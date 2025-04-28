@@ -6,16 +6,16 @@ const PrivacyPolicy = () => {
   }, []);
   return (
     <>
-      <div className="py-20 bg-black text-white flex items-center justify-center">
-        <p className="text-[28px]  font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
+      <div className="py-5 md:py-20 bg-black text-white flex items-center justify-center">
+        <p className="text-[28px] capitalize  font-bold leading-[75.2px] md:tracking-[35.6px] text-center">
           privacy policy
         </p>
       </div>
-      <div className="info px-5 py-20 md:px-28">
-        <h3 className="font-bold text-[34px] leading-[40px] uppercase">
+      <div className="info px-5 py-5 md:py-20 md:px-28">
+        <h3 className="font-bold text-2xl md:text-[34px] leading-[40px] uppercase">
           Privacy Policy for sopdakt E-Commerce SAE
         </h3>
-        <p className="text-[20px] lowercase leading-[40px] text-center md:text-left">
+        <p className="sm:text-[20px] lowercase leading-[40px] text-center md:text-left">
           At sopdakt, we are committed to protecting the privacy of our
           customers and users. This Privacy Policy outlines how sopdakt
           E-Commerce SAE (referred to as "sopdakt", "we", "our", or "us")
@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
           accordance with applicable data protection laws in Egypt.
         </p>
         <ul className="list-disc flex flex-col gap-1 items-center md:items-start">
-          <h4 className="text-[#FF3200] text-[32px] font-medium uppercase">
+          <h4 className="text-[#FF3200] sm:text-[32px] font-medium uppercase">
             1. Information We Collect
           </h4>
           <span>
@@ -44,7 +44,7 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
         <ul className="list-disc my-2 flex flex-col gap-1 items-center md:items-start">
-          <span className="font-semibold text-[26px] text-center">
+          <span className="font-semibold sm:text-[26px] text-center">
             The types of personal information we may collect include:
           </span>
           <li className="ml-10">Name, address, email, and phone number. </li>
@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
           </span>
         </ul>
         <ul className="list-disc flex flex-col gap-1 items-center md:items-start">
-          <h4 className="text-[#FF3200] text-[32px] font-medium uppercase">
+          <h4 className="text-[#FF3200] sm:text-[32px] font-medium uppercase">
             2. Your Rights
           </h4>
           <span>You have the right to:</span>

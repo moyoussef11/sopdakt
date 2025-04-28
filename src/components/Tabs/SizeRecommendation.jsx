@@ -36,7 +36,7 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
         style={{ padding: 0 }}
       >
         <div className="relative flex flex-col items-center justify-center bg-white p-6">
-          <h1 className="text-[30px] md:text-[50px] font-normal text-[#FF3200]  text-center">
+          <h1 className="text-[17px] sm:text-[30px] md:text-[50px] font-normal text-[#FF3200]  text-center">
             Size Recomandtion
           </h1>
           <img
@@ -46,13 +46,16 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
             loading="lazy"
             onClick={() => setOpenSizeRec(false)}
           />
-          <form onSubmit={handleSubmit} className="w-full">
+          <form onSubmit={handleSubmit} className="w-full grid grid-cols-2 md:grid-cols-3 gap-5">
             {fields.map(({ label, options }) => {
               const fieldId = label.toLowerCase();
               return (
                 <div key={label} className="">
                   <label className="block mb-1 font-medium">{label}</label>
-                  <div className="relative border border-orange-500 rounded-md flex items-center">
+                  <div
+                    className="relative border border-[#FF3200] rounded-md flex items-center"
+                    // className="relative border border-orange-500 rounded-md flex items-center"
+                  >
                     <img src={outlineIcon} alt="outlineIcon" className="mx-2" />
                     <input
                       list={`list-${fieldId}`}
@@ -79,7 +82,7 @@ const SizeRecommendation = ({ openSizeRec, setOpenSizeRec }) => {
             <button
               type="submit"
               onClick={() => setPerfect(true)}
-              className="w-full bg-[#FF3200] my-3 cursor-pointer hover:bg-white hover:shadow-2xl md:w-[170px] mx-auto block uppercase text-white hover:text-black py-3 rounded-md font-bold text-lg transition"
+              className="w-full bg-[#FF3200] mt-7 h-fit cursor-pointer hover:bg-white hover:shadow-2xl md:w-[170px] mx-auto block uppercase text-white hover:text-black py-2  rounded-md font-bold text-lg transition"
             >
               countiue
             </button>
