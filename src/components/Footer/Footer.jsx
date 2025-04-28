@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
-      <div className="bg-[#FF3200] py-6 md:py-20 md:px-32 flex flex-col flex-wrap lg:flex-nowrap justify-center md:flex-row items-center gap-5">
+      <div className="bg-[#FF3200] py-3 md:py-20 md:px-32 flex flex-col flex-wrap lg:flex-nowrap justify-center md:flex-row items-center gap-5">
         <div className="w-full lg:w-1/2 text-center md:text-left">
-          <h4 className="text-[20px] md:text-[36px] tracking-[4%] text-white font-bold uppercase">
+          <h4 className="sm:text-[20px] md:text-[36px] tracking-[4%] text-white font-bold uppercase">
             subscribe newsletter
           </h4>
           <p className="md:text-[24px] text-white tracking-[0]">
@@ -18,17 +18,17 @@ const Footer = () => {
         </div>
         <div>
           <form
-            className="w-full md:w-[700px]  grid grid-cols-[1fr_150px]  gap-2"
+            className="w-full md:w-[700px] grid-cols-[1fr_100px]  grid md:grid-cols-[1fr_150px]  gap-2"
             // className="w-full md:w-[700px] flex flex-wrap lg:flex-nowrap  flex-col md:flex-row justify-between items-center gap-2"
           >
             <input
               type="text"
               placeholder="Email address..."
-              className="w-full bg-white rounded-xl p-4"
+              className="w-full bg-white rounded-xl p-2 md:p-4"
               name=""
               id=""
             />
-            <button className="bg-black text-center w-fit text-white py-2 px-5  md:px-10 rounded-xl uppercase font-bold cursor-pointer">
+            <button className="bg-black text-[15px] md:text-base text-center md:w-fit text-white md:py-2 md:px-10 rounded-xl uppercase font-bold cursor-pointer">
               subscribe
             </button>
           </form>
@@ -43,10 +43,10 @@ const Footer = () => {
           />
         </div>
         <div className="w-full flex flex-col">
-          <div className="flex items-center mx-auto gap-5 justify-between">
-            <img src={logo} alt="logo" className="h-28 md:hidden" />
+          <div className="flex items-center w-full gap-5 justify-between">
+            <img src={logo} alt="logo" className="h-24 m-3 md:hidden" />
             <ul
-              className="flex my-2 w-full  justify-center items-center flex-col md:flex-row md:justify-start flex-wrap gap-0 md:gap-5"
+              className=" flex my-2 mx-1 w-full gap-2 flex-row  justify-center items-center md:flex-row md:justify-start flex-wrap md:gap-5"
               // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
             >
               <li>
