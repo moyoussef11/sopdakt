@@ -14,7 +14,6 @@ import pic3 from "../../assets/Border (3).png";
 import pic4 from "../../assets/Border (4).png";
 import pic5 from "../../assets/Border (5).png";
 
-
 const tabs = [
   "Description",
   "Additional Information",
@@ -23,7 +22,7 @@ const tabs = [
   "Return Policies",
 ];
 
-const ProductDetailsTabs = () => {
+const ProductDetailsTabs = ({ product }) => {
   const [activeTab, setActiveTab] = useState("Description");
 
   return (
@@ -49,11 +48,7 @@ const ProductDetailsTabs = () => {
       {activeTab === "Description" && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
           <div>
-            <p className="mb-4">
-              This shirt features button-up sleeves and a relaxed silhouette.
-              It’s made from crinkle-texture LENZING™ ECOVERO™ Viscose —
-              responsibly sourced fabric that's soft and sustainable.
-            </p>
+            <p className="mb-4">{product?.description}</p>
 
             <div className="mb-4">
               <h4 className="font-semibold mb-2">Features</h4>

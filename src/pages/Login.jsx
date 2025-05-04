@@ -1,17 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import authImg from "../assets/auth.png";
 import deviderImg from "../assets/Divider.png";
 import { FaGoogle, FaApple, FaTwitter, FaFacebookF } from "react-icons/fa";
-import { Input, Button } from "antd";
+import { Input, Button, message } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { useForm, Controller } from "react-hook-form";
+import { useSelector, useDispatch } from "react-redux";
+import { loginUser } from "../rtk/features/Auth/actAuth";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm({ mode: "onChange" });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [passwordVisible, setPasswordVisible] = React.useState(false);
+  const dispatch = useDispatch();
+  const { loading, error, user } = useSelector((state) => state.auth);
+  const location = useLocation();
+  const nav = useNavigate();
+
+  const onSubmit = async (data) => {
+    const result = await dispatch(loginUser(data));
+    if (result.payload.message === "Login successful") {
+      const from = location.state?.from?.pathname || "/";
+      nav(from, { replace: true });
+    }
+  };
+
+  useEffect(() => {
+    if (error) {
+      message.error("credentials are incorrect password or email");
+    }
+  }, [error]);
 
   return (
     <div className="w-full h-screen relative bg-center bg-cover">
@@ -39,7 +64,10 @@ const Login = () => {
             Kindly fill in your details below to log in{" "}
           </p>
 
-          <form className="flex flex-col gap-3">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-3"
+          >
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="email"
@@ -47,11 +75,31 @@ const Login = () => {
               >
                 Email Address
               </label>
-              <Input
-                id="email"
-                className="placeholder:uppercase border !border-[#CBCAD7] !p-4 !rounded-[6px]"
-                placeholder="Enter your email address"
+              <Controller
+                name="email"
+                control={control}
+                rules={{
+                  required: "Email is required",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Invalid email format",
+                  },
+                }}
+                render={({ field }) => (
+                  <Input
+                    {...field}
+                    id="email"
+                    autoComplete="email"
+                    className="placeholder:uppercase border !border-[#CBCAD7] !p-4 !rounded-[6px]"
+                    placeholder="Enter your email address"
+                  />
+                )}
               />
+              {errors.email && (
+                <span className="text-[12px] font-semibold text-red-500">
+                  {errors.email.message}
+                </span>
+              )}
             </div>
 
             <div className="flex flex-col gap-2">
@@ -61,18 +109,45 @@ const Login = () => {
               >
                 Password{" "}
               </label>
-              <Input.Password
-                id="Password"
-                className="placeholder:!uppercase border !border-[#CBCAD7] !p-4 !rounded-[6px]"
-                placeholder="**************"
-                iconRender={(visible) =>
-                  visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-                }
+              <Controller
+                name="password"
+                control={control}
+                rules={{
+                  required: "Password is required",
+                  minLength: {
+                    value: 6,
+                    message: "Password must be at least 6 characters",
+                  },
+                }}
+                render={({ field }) => (
+                  <Input.Password
+                    {...field}
+                    id="password"
+                    autoComplete="current-password"
+                    placeholder="Create your password"
+                    iconRender={(visible) =>
+                      visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                    }
+                    className="placeholder:uppercase border !border-[#CBCAD7] !p-4 !rounded-[6px]"
+                  />
+                )}
               />
+              {errors.password && (
+                <span className="text-[12px] font-semibold text-red-500">
+                  {errors.password.message}
+                </span>
+              )}
             </div>
-            <Button className="!bg-[#FF3200] !text-white !uppercase !text-[16.8px] !leading-[24px] !font-bold !tracking-[3.36px] !px-5 !my-1 !w-fit mx-auto !border-none hover:!shadow-md hover:!text-black hover:!bg-white">
-              sign in{" "}
-            </Button>
+            <button
+              type="submit"
+              className={`bg-[#FF3200] ${
+                loading === "pending"
+                  ? "opacity-50 cursor-not-allowed pointer-events-none"
+                  : "opacity-100"
+              } cursor-pointer p-2 rounded-2xl !text-white !uppercase !text-[16.8px] !leading-[24px] !font-bold !tracking-[3.36px] !px-5 !my-1 !w-fit mx-auto !border-none hover:!shadow-md hover:!text-black hover:!bg-white`}
+            >
+              {loading === "pending" ? "loading..." : " sign in"}{" "}
+            </button>
             <p className="leading-[25px] text-center uppercase tracking-[0.5%] font-normal">
               don`t have an account?{" "}
               <Link

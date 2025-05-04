@@ -18,7 +18,7 @@ const CardCat = ({ pic, name }) => {
         stiffness: 260,
         damping: 20,
       }}
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center gap-2"
     >
       <div className="w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[140px] md:h-[140px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#D9D9D9] overflow-hidden">
         {pic && (
@@ -30,7 +30,7 @@ const CardCat = ({ pic, name }) => {
           />
         )}
       </div>
-      <h3 className="font-medium uppercase text-[10px] sm:text-[12px] md:text-[16px] lg:text-[20px] tracking-[2px] text-center mt-3">
+      <h3 className="font-medium uppercase text-[10px] sm:text-[12px] md:text-[14px] lg:text-[19px] tracking-[2px] text-center mt-3">
         {name}
       </h3>
     </motion.div>

@@ -7,15 +7,24 @@ import user from "../../assets/user.png";
 import cart from "../../assets/cart.png";
 import compare from "../../assets/com.png";
 import { CiHeart } from "react-icons/ci";
-import { IoIosSearch, IoMdClose } from "react-icons/io";
+import { IoIosSearch, IoMdClose, IoIosLogOut } from "react-icons/io";
 import { CiMenuBurger } from "react-icons/ci";
 import flash from "../../assets/flash.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Tooltip } from "antd";
+import { useDispatch } from "react-redux";
+import { logout } from "../../rtk/features/Auth/authSlice";
+import Cookies from "universal-cookie";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = useLocation().pathname.split("/")[1];
   const [active, setActive] = useState(pathname === "" ? "/" : pathname);
+  const dispatch = useDispatch();
+  const nav = useNavigate();
+  const cookies = new Cookies();
+  const token = cookies.get("token");
+
 
   return (
     <>
@@ -335,9 +344,9 @@ const Header = () => {
             <img src={dropLang} className="h-[12px] w-[8px]" alt="dropLang" />
           </div>
           <div>
-            <ul className="flex flex-wrap shrink-0 items-center gap-[10px]">
+            <ul className="flex flex-wrap justify-center items-center gap-[10px]">
               <li>
-                <Link to="/login">
+                <Link to="/profile">
                   <img src={user} alt="userIcon" className="w-[24px]" />
                 </Link>
               </li>
@@ -364,6 +373,21 @@ const Header = () => {
                   <img src={cart} alt="userIcon" className="w-[24px]" />
                 </Link>
               </li>
+
+              {token && (
+                <Tooltip title="Logout">
+                  {" "}
+                  <li
+                    className=""
+                    onClick={() => {
+                      dispatch(logout());
+                      nav("/login");
+                    }}
+                  >
+                    <IoIosLogOut className="w-[24px] h-[24px] cursor-pointer text-red-500" />
+                  </li>
+                </Tooltip>
+              )}
             </ul>
           </div>
         </div>
@@ -667,7 +691,7 @@ const Header = () => {
             <div>
               <ul className="flex flex-wrap shrink-0 items-center gap-[10px]">
                 <li>
-                  <Link onClick={() => setIsOpen(false)} to="/login">
+                  <Link onClick={() => setIsOpen(false)} to="/profile">
                     <img src={user} alt="userIcon" className="w-[24px]" />
                   </Link>
                 </li>
@@ -682,6 +706,21 @@ const Header = () => {
                     <img src={compare} alt="compareIcon" className="w-[24px]" />
                   </Link>
                 </li>
+                {token && (
+                  <Tooltip title="Logout">
+                    {" "}
+                    <li
+                      className=""
+                      onClick={() => {
+                        dispatch(logout());
+                        nav("/login");
+                        setIsOpen(false)
+                      }}
+                    >
+                      <IoIosLogOut className="w-[24px] h-[24px] cursor-pointer text-red-500" />
+                    </li>
+                  </Tooltip>
+                )}
               </ul>
             </div>
           </div>
@@ -700,7 +739,11 @@ const Header = () => {
                 <span className="absolute -right-1 bg-[#FF5B5B] w-[10px] h-[12px] md:w-[16px] md:h-[16px] rounded-[8px] text-center text-[11px]">
                   0
                 </span>
-                <img src={cart} alt="userIcon" className="w-[15px] md:w-[24px]" />
+                <img
+                  src={cart}
+                  alt="userIcon"
+                  className="w-[15px] md:w-[24px]"
+                />
               </Link>
             </li>
           </ul>

@@ -24,6 +24,8 @@ import BlogDetails from "./pages/BlogDetails.jsx";
 import Login from "./pages/Login.jsx";
 import Subscribers from "./components/Tabs/Subscribers.jsx";
 import Spin from "./components/Tabs/Spin.jsx";
+import IsLogged from "./middleware/isLogged.jsx";
+import IsGuest from "./middleware/IsGuest.jsx";
 
 function App() {
   const pathName = useLocation().pathname;
@@ -32,8 +34,8 @@ function App() {
 
   return (
     <>
-      <Subscribers />
-      <Spin />
+      {/* <Subscribers />
+      <Spin /> */}
       {!isHidden && <TopBar />}
       <Header />{" "}
       <Routes>
@@ -44,17 +46,23 @@ function App() {
         <Route path="/blog/blog-details/:id" element={<BlogDetails />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/product/:id" element={<Product />} />
+        <Route path="/product/:slug" element={<Product />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/compare" element={<Compare />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<IsLogged />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+
         <Route path="/cart" element={<Cart />} />
         <Route path="/cart/checkout" element={<Checkout />} />
         <Route path="/cart/checkout/verify" element={<Verify />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/create-account" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route element={<IsGuest />}>
+          <Route path="/create-account" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+
         <Route path="*" element={<NotFound404 />} />
       </Routes>
       {!isHidden && <Footer />}

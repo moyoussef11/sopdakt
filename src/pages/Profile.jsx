@@ -101,6 +101,7 @@ const Profile = () => {
                 <input
                   type="email"
                   id="Email"
+                  autoComplete="email"
                   placeholder="rimel1111@gmail.com"
                   className="bg-[#F5F5F5] rounded-[4px] p-3 w-full"
                 />
@@ -125,18 +126,21 @@ const Profile = () => {
                 <input
                   type="password"
                   id="Current Password"
+                  autoComplete="current-password"
                   placeholder="Current Passwod"
                   className="bg-[#F5F5F5] rounded-[4px] p-3 w-full"
                 />
                 <input
                   type="password"
                   id="New Password"
+                  autoComplete="new-password"
                   placeholder="New Password"
                   className="bg-[#F5F5F5] rounded-[4px] p-3 w-full"
                 />
                 <input
                   type="password"
                   id="Confirm New Password"
+                  autoComplete="new-password"
                   placeholder="Confirm New Password"
                   className="bg-[#F5F5F5] rounded-[4px] p-3 w-full"
                 />

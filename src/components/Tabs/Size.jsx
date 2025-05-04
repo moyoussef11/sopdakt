@@ -1,9 +1,9 @@
 import React from "react";
 import size from "../../assets/size.png";
 import close from "../../assets/close.png";
-import {  Modal } from "antd";
+import { Modal } from "antd";
 
-const SizeChart = ({ openSize, setOpenSize }) => {
+const SizeChart = ({ openSize, setOpenSize, data }) => {
   const sizes = [
     {
       label: "S",
@@ -32,6 +32,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
     },
   ];
 
+
   return (
     <Modal
       title={null}
@@ -52,23 +53,25 @@ const SizeChart = ({ openSize, setOpenSize }) => {
               onClick={() => setOpenSize(false)}
             />
             <div className="flex relative items-center flex-wrap md:flex-nowrap justify-between mb-4 border-b border-[#808285] pb-4">
-              <div className="w-full md:w-1/2 mb-4 md:mb-0">
-                <img className="md:h-[230px]" src={size} alt="size" />
+              <div className="w-full mx-5 md:w-1/2 mb-4 md:mb-0">
+                <img
+                  className="md:h-[230px] rounded-2xl mx-auto"
+                  src={data?.image_url}
+                  alt={data?.title}
+                />
               </div>
-              <div className="w-full mb-4 md:mb-0">
+              <div className="w-full text-center mb-4 md:mb-0">
                 <h4 className="text-[50px] leading-[100%] text-[#FF3200] mb-2">
-                  Size Chart for Men
+                  {data?.title}
                 </h4>
                 <p className="text-[#555741] text-[20px] leading-[100%] mb-4">
-                  This size chart shows product measurements taken when products
-                  are laid flat. Actual product measurements may vary by up to
-                  1".
+                  {data?.description}
                 </p>
               </div>
             </div>
 
             {/* Inch Table */}
-            <h2 className="font-semibold text-[#808285] bg-[#E6E6E6] w-fit text-center px-6 text-sm mb-2">
+            {/* <h2 className="font-semibold text-[#808285] bg-[#E6E6E6] w-fit text-center px-6 text-sm mb-2">
               Inch
             </h2>
             <div className="overflow-x-auto">
@@ -128,10 +131,10 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div> */}
 
             {/* Centimeter Table */}
-            <h2 className="font-semibold my-2 text-[#808285] bg-[#E6E6E6] w-fit text-center px-6 text-sm mb-2">
+            {/* <h2 className="font-semibold my-2 text-[#808285] bg-[#E6E6E6] w-fit text-center px-6 text-sm mb-2">
               Centimetre
             </h2>
             <div className="overflow-x-auto">
@@ -191,7 +194,7 @@ const SizeChart = ({ openSize, setOpenSize }) => {
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

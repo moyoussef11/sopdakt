@@ -4,7 +4,6 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { motion } from "framer-motion";
 
-
 const sectors = [
   "ساعة",
   "موبايل",
@@ -99,10 +98,10 @@ const Spin = () => {
           <div className="flex flex-col items-center justify-center  overflow-hidden">
             <div className="relative w-[300px] h-[300px]">
               {/* Red border */}
-              <div className="absolute inset-0 rounded-full border-[8px] border-[#FF3200]"></div>
+              <div className="absolute inset-0 rounded-full border-[8px] border-white"></div>
 
               {/* White border */}
-              <div className="absolute inset-2 rounded-full border-[8px] border-white"></div>
+              <div className="absolute inset-2 rounded-full border-[8px] border-[#FF3200]"></div>
 
               {/* Wheel */}
               <motion.svg
@@ -159,7 +158,6 @@ const Spin = () => {
                 🎉 مبروك! كسبت: {prize} 🎉
               </motion.div>
             )}
-           
           </div>
         </div>
 

@@ -43,10 +43,10 @@ const Footer = () => {
           />
         </div>
         <div className="w-full flex flex-col">
-          <div className="flex items-center px-10 w-full gap-5 justify-between">
-            <img src={logo} alt="logo" className="h-24 m-3 md:hidden" />
+          <div className="flex items-center flex-col px-10 w-full gap-5 md:gap-0 justify-between">
+            <img src={logo} alt="logo" className="h-24 mt-2 md:hidden" />
             <ul
-              className=" flex my-2 flex-col justify-center items-center md:flex-row md:justify-start flex-wrap md:gap-5"
+              className=" flex my-2 flex-col justify-center w-full items-center md:flex-row flex-wrap md:justify-start  md:gap-2"
               // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
             >
               <li>
@@ -105,8 +105,8 @@ const Footer = () => {
                   Contact Us{" "}
                 </Link>
               </li>
-              <li className="hidden md:block">
-                <div className="flex gap-2 items-center">
+              <li className="">
+                <div className="flex my-2 gap-2 items-center">
                   <a href="" target="_blank">
                     {" "}
                     <img src={insta} alt="socialIcons" loading="lazy" />
@@ -123,7 +123,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <ul
+          {/* <ul
             className="flex w-full md:hidden  justify-center items-center flex-col md:flex-row md:justify-start flex-wrap md:gap-5"
             // className="flex w-full flex-col md:flex-row justify-center items-center md:justify-start flex-wrap gap-5"
           >
@@ -143,8 +143,8 @@ const Footer = () => {
                 </a>
               </div>
             </li>
-          </ul>
-          <ul className="text-white my-3 md:my-10 flex flex-wrap gap-3 justify-center md:flex-col md:gap-2 text-center md:text-left">
+          </ul> */}
+          <ul className="text-white my-3 md:my-10 flex gap-3 justify-center flex-col md:gap-2 text-center md:text-left">
             <li>Email: info@NNGHTJcom</li>
             <li>Phone: 555-567-8901</li>
             <li>
@@ -153,7 +153,7 @@ const Footer = () => {
           </ul>
           <hr className="border border-white" />
           <div className="text-white flex items-center  justify-between flex-col md:flex-row gap-5 my-3 md:py-5">
-            <div className="flex flex-wrap justify-center items-center gap-6 my-2 md:py-10">
+            <div className="flex flex-wrap justify-center items-center gap-2 md:gap-6 my-2 md:py-10">
               <span>© 2025 pd. All Rights Reserved.</span>
               <span>
                 Devolped with ♡ by{" "}
