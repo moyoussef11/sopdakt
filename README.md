@@ -1,12 +1,41 @@
-# React + Vite
+# SopDakt Store – E‑Commerce Frontend (2025)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Role:** Freelance Frontend Developer via Upwork
 
-Currently, two official plugins are available:
+A responsive and modern e-commerce frontend built by converting a Figma design into a functional React.js application using Tailwind CSS and Framer Motion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+##  Highlights
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Pixel-perfect implementation directly from Figma design  
+- Animated transitions and interactions using Framer Motion  
+- Mobile-first design with responsive grid layouts  
+- Reusable components for products, navigation, and UI elements  
+
+---
+
+##  Tech Stack
+
+- Frontend: React.js  
+- Styling: Tailwind CSS  
+- Animation: Framer Motion  
+
+---
+
+##  Project Structure
+
+```bash
+src/
+├── components/        # Reusable UI parts (ProductCard, Navbar, etc.)
+├── pages/             # Layout pages (Home, Product List, Product Details)
+├── assets/            # Images, icons, and Figma-exported assets
+└── App.jsx
+
+##  Installation & Running
+
+git clone https://github.com/moyoussef11/SopDakt-Store-2025.git
+cd SopDakt-Store-2025
+npm install
+npm run dev  # or npm start
+
