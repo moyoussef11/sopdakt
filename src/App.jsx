@@ -24,7 +24,7 @@ import BlogDetails from "./pages/BlogDetails.jsx";
 import Login from "./pages/Login.jsx";
 import Subscribers from "./components/Tabs/Subscribers.jsx";
 import Spin from "./components/Tabs/Spin.jsx";
-import IsLogged from "./middleware/isLogged.jsx";
+import IsLogged from "./middleware/IsLogged.jsx";
 import IsGuest from "./middleware/IsGuest.jsx";
 
 function App() {
